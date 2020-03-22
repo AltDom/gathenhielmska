@@ -41,3 +41,6 @@ add_action('after_setup_theme', function () {
 add_filter('jpeg_quality', function () {
     return 100;
 }, 10, 2);
+
+
+require get_template_directory() . '/fields/home.php';
