@@ -43,4 +43,31 @@ add_filter('jpeg_quality', function () {
 }, 10, 2);
 
 
+//require fields/post-types etc
 require get_template_directory() . '/fields/home.php';
+require get_template_directory() . '/fields/post.php';
+require get_template_directory() . '/post-types/event.php';
+
+
+
+
+// regular function made to get the excerpt, should we make a new file for this, or use wp functions?
+
+if (!function_exists("customFieldExcerpt")) {
+    /**
+     * Turn a string into a short summary, second parameter is optional, the default is 20 words.
+     * Third parameter is also optional, end of string is ... by default.
+     *
+     * @param string $text
+     * @param integer $numberOfWords
+     * @return string
+     */
+    function customFieldExcerpt(string $text, int $numberOfWords = 20, $endOfString = "..."): string
+    {
+        $words = explode(" ", $text);
+        array_splice($words, $numberOfWords);
+        $result = implode(" ", $words) . $endOfString;
+
+        return $result;
+    }
+}
