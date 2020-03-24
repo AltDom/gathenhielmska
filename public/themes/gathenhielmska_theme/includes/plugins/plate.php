@@ -48,7 +48,7 @@ add_theme_support('plate-disable-toolbar', [
 ]);
 
 // Set custom permalink structure.
-add_theme_support('plate-permalink', '/%postname%/');
+// add_theme_support('plate-permalink', '/%postname%/');
 
 // Set custom login logo.
 add_theme_support('plate-login-logo', get_theme_file_uri('assets/images/logo.png'));

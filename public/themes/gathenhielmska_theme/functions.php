@@ -46,6 +46,7 @@ add_filter('jpeg_quality', function () {
 //require fields/post-types etc
 require get_template_directory() . '/fields/home.php';
 require get_template_directory() . '/fields/post.php';
+require get_template_directory() . '/fields/event.php';
 require get_template_directory() . '/post-types/event.php';
 
 
