@@ -1,7 +1,8 @@
 /* WordPlate */
 
-
-
+@import "main.scss";
+@import "events.scss";
+@import "event-card.scss";
 
 
 
@@ -9,9 +10,8 @@
 
 
 // temporary css under here!
-body {
-  background-color: antiquewhite;
-}
+
+
 
 .hero-image {
   width: 100vw;

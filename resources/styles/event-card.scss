@@ -1,0 +1,17 @@
+.event-card {
+  height: 400px;
+  width: 300px;
+  padding: 20px;
+  background-color: white;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h2 {
+    color: green;
+  }
+  p {
+    color: red;
+  }
+}

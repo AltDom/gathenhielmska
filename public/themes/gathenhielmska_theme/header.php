@@ -5,6 +5,7 @@
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="theme-color" content="#6d9aea">
+    <link href="https://unpkg.com/sanitize.css" rel="stylesheet" />
 
     <?php wp_head(); ?>
 </head>
@@ -13,7 +14,6 @@
     <header>
         <img src="/assets/images/logo.svg" alt="gathenhielmska-logo">
         <nav role="navigation">
-            <h1>Hello Osker test</h1>
             <?php wp_nav_menu(['theme_location' => 'navigation']); ?>
         </nav>
     </header>
