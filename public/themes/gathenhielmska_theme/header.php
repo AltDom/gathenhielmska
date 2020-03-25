@@ -13,6 +13,7 @@
     <header>
         <img src="/assets/images/logo.svg" alt="gathenhielmska-logo">
         <nav role="navigation">
+            <h1>Hello Dominic</h1>
             <?php wp_nav_menu(['theme_location' => 'navigation']); ?>
         </nav>
     </header>
