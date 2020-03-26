@@ -1,7 +1,7 @@
 <?php /* Template Name: Events */ ?>
 <?php get_header(); ?>
 
-<section class="events">
+<section class="event-page">
 
 
 
