@@ -1,11 +1,16 @@
 /* WordPlate */
 
 @import "main.scss";
+@import "header.scss";
 @import "events.scss";
 @import "event-card.scss";
 
 
-
+html {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
 
 
 

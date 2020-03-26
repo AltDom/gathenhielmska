@@ -49,7 +49,12 @@ require get_template_directory() . '/fields/post.php';
 require get_template_directory() . '/fields/event.php';
 require get_template_directory() . '/post-types/event.php';
 
-
+add_theme_support('soil-js-to-footer');
+add_theme_support('soil-clean-up');
+add_theme_support('soil-disable-asset-versioning');
+add_theme_support('soil-disable-trackbacks');
+add_theme_support('soil-nice-search');
+add_theme_support('soil-relative-urls');
 
 
 // regular function made to get the excerpt, should we make a new file for this, or use wp functions?

@@ -11,6 +11,7 @@
     "require": {
         "php": "^7.2",
         "johnbillion/extended-cpts": "^4.3",
+        "roots/soil": "^3.9",
         "wordplate/framework": "^8.0",
         "wordplate/plate": "^6.0"
     },
