@@ -24,13 +24,15 @@
             </div>
             <div class="menu">
                 <ul>
-                <?php foreach (wp_get_nav_menu_items('navigation') as $page): ?>
-                    <li class="nav-item <?php if (is_home() && $page->object_id == get_option('page_for_posts') || is_page($page->object_id)) { echo 'active'; } ?>">
-                        <a class="nav-link" href="<?php echo $page->url; ?>">
-                            <?php echo $page->title; ?>
-                        </a><!-- /nav-link -->
-                    </li><!-- /nav-item -->
-                <?php endforeach; ?>
+                    <?php foreach (wp_get_nav_menu_items('navigation') as $page) : ?>
+                        <li class="nav-item <?php if (is_home() && $page->object_id == get_option('page_for_posts') || is_page($page->object_id)) {
+                                                echo 'active';
+                                            } ?>">
+                            <a class="nav-link" href="<?php echo $page->url; ?>">
+                                <?php echo $page->title; ?>
+                            </a><!-- /nav-link -->
+                        </li><!-- /nav-item -->
+                    <?php endforeach; ?>
                 </ul><!-- /navbar -->
             </div>
             <div class="close"><svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
