@@ -22,7 +22,17 @@
                 <h4>/</h4>
                 <h4 class="english">ENG</h4>
             </div>
-            <?php wp_nav_menu(['theme_location' => 'navigation']); ?>
+            <div class="menu">
+                <ul>
+                <?php foreach (wp_get_nav_menu_items('navigation') as $page): ?>
+                    <li class="nav-item <?php if (is_home() && $page->object_id == get_option('page_for_posts') || is_page($page->object_id)) { echo 'active'; } ?>">
+                        <a class="nav-link" href="<?php echo $page->url; ?>">
+                            <?php echo $page->title; ?>
+                        </a><!-- /nav-link -->
+                    </li><!-- /nav-item -->
+                <?php endforeach; ?>
+                </ul><!-- /navbar -->
+            </div>
             <div class="close"><svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1 1L32.5 32.5" stroke="white" stroke-width="2" stroke-linecap="round" />
                     <path d="M32.5 1L0.999999 32.5" stroke="white" stroke-width="2" stroke-linecap="round" /></svg></div>
