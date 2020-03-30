@@ -10,6 +10,40 @@
 
 <?php endwhile; ?>
 
+<!-- Events -->
+<h2>kommande evenemang</h2>
+
+<?php
+$the_query = new WP_Query([
+    'post_type' => 'event',
+    'posts_per_page' => 3
+]);
+?>
+
+
+<?php if ($the_query->have_posts()) : ?>
+
+    <div class="event-carousel-container">
+        <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+
+            <div class="event-carousel-item">
+                <div class="event-card">
+                    <h3><?php the_title(); ?></h3>
+                    <p><?php echo customFieldExcerpt(get_field("description")); ?></p>
+                    <p><?php the_field("date"); ?></p>
+                    <p><?php the_field("time"); ?></p>
+                </div>
+            </div>
+
+        <?php endwhile; ?>
+    </div>
+    <?php wp_reset_postdata(); ?>
+
+<?php else : ?>
+    <p><?php __('No News'); ?></p>
+<?php endif; ?>
+
+
 <!-- Nyheter -->
 <h2>På gång i huset</h2>
 
@@ -30,33 +64,6 @@ $the_query = new WP_Query([
 
 <?php else : ?>
     <!-- dont know what the __() is about -->
-    <p><?php __('No News'); ?></p>
-<?php endif; ?>
-
-<!-- Events -->
-<h2>kommande evenemang</h2>
-
-<?php
-$the_query = new WP_Query([
-    'post_type' => 'event',
-    'posts_per_page' => 1
-]);
-?>
-
-<?php if ($the_query->have_posts()) : ?>
-    <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
-
-        <div class="event-card">
-            <h3><?php the_title(); ?></h3>
-            <p><?php echo customFieldExcerpt(get_field("description")); ?></p>
-            <p><?php the_field("start_date"); ?></p>
-            <p><?php the_field("start_time"); ?></p>
-        </div>
-
-    <?php endwhile; ?>
-    <?php wp_reset_postdata(); ?>
-
-<?php else : ?>
     <p><?php __('No News'); ?></p>
 <?php endif; ?>
 

@@ -3,15 +3,15 @@
 if (function_exists('acf_add_local_field_group')) :
 
     acf_add_local_field_group(array(
-        'key' => 'group_5e78ab51d26f8',
+        'key' => 'group_5e81e1800b7a8',
         'title' => 'Event',
         'fields' => array(
             array(
-                'key' => 'field_5e78ab672834b',
+                'key' => 'field_5e81e1dc1b7ab',
                 'label' => 'Performer',
                 'name' => 'performer',
                 'type' => 'text',
-                'instructions' => 'Add the name of the performer.',
+                'instructions' => 'Name of the performer.',
                 'required' => 1,
                 'conditional_logic' => 0,
                 'wrapper' => array(
@@ -26,11 +26,11 @@ if (function_exists('acf_add_local_field_group')) :
                 'maxlength' => '',
             ),
             array(
-                'key' => 'field_5e78ab912834c',
-                'label' => 'Start Date',
-                'name' => 'start_date',
+                'key' => 'field_5e81e2021b7ac',
+                'label' => 'Date',
+                'name' => 'date',
                 'type' => 'date_picker',
-                'instructions' => 'Add the date of the event.',
+                'instructions' => 'The start date of the event.',
                 'required' => 1,
                 'conditional_logic' => 0,
                 'wrapper' => array(
@@ -43,28 +43,11 @@ if (function_exists('acf_add_local_field_group')) :
                 'first_day' => 1,
             ),
             array(
-                'key' => 'field_5e78ac042834d',
-                'label' => 'End Date',
-                'name' => 'end_date',
-                'type' => 'date_picker',
-                'instructions' => 'If the event lasts more than one day, add an end date.',
-                'required' => 0,
-                'conditional_logic' => 0,
-                'wrapper' => array(
-                    'width' => '',
-                    'class' => '',
-                    'id' => '',
-                ),
-                'display_format' => 'd/m/Y',
-                'return_format' => 'd/m/Y',
-                'first_day' => 1,
-            ),
-            array(
-                'key' => 'field_5e78ac632834e',
-                'label' => 'Start Time',
-                'name' => 'start_time',
+                'key' => 'field_5e81e23e1b7ad',
+                'label' => 'Time',
+                'name' => 'time',
                 'type' => 'time_picker',
-                'instructions' => 'Add the time the event starts.',
+                'instructions' => 'The start time of the event.',
                 'required' => 1,
                 'conditional_logic' => 0,
                 'wrapper' => array(
@@ -72,31 +55,15 @@ if (function_exists('acf_add_local_field_group')) :
                     'class' => '',
                     'id' => '',
                 ),
-                'display_format' => 'g:i a',
-                'return_format' => 'g:i a',
+                'display_format' => 'H:i:s',
+                'return_format' => 'H:i:s',
             ),
             array(
-                'key' => 'field_5e78aca72834f',
-                'label' => 'End Time',
-                'name' => 'end_time',
-                'type' => 'time_picker',
-                'instructions' => 'Add the time the event ends.',
-                'required' => 1,
-                'conditional_logic' => 0,
-                'wrapper' => array(
-                    'width' => '',
-                    'class' => '',
-                    'id' => '',
-                ),
-                'display_format' => 'g:i a',
-                'return_format' => 'g:i a',
-            ),
-            array(
-                'key' => 'field_5e78acd628350',
+                'key' => 'field_5e81e2cd1b7ae',
                 'label' => 'Image',
                 'name' => 'image',
                 'type' => 'image',
-                'instructions' => 'Add an image for the event.',
+                'instructions' => 'An image for the event.',
                 'required' => 1,
                 'conditional_logic' => 0,
                 'wrapper' => array(
@@ -116,11 +83,11 @@ if (function_exists('acf_add_local_field_group')) :
                 'mime_types' => '',
             ),
             array(
-                'key' => 'field_5e78ad2828352',
+                'key' => 'field_5e81e2fe1b7af',
                 'label' => 'Description',
                 'name' => 'description',
                 'type' => 'textarea',
-                'instructions' => 'Add a description for the event.',
+                'instructions' => 'A description of the event.',
                 'required' => 1,
                 'conditional_logic' => 0,
                 'wrapper' => array(

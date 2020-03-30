@@ -1,0 +1,15 @@
+.event-carousel-container {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  width: 100vw;
+}
+
+.event-carousel-item {
+  flex: 0 0 auto;
+  height: 100%;
+  width: 240px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
