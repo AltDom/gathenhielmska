@@ -5,6 +5,7 @@ const searchForm = () => {
   if (searchForm != null) {
     const categoryBtn = searchForm.querySelector(".options .category-options");
     const categories = searchForm.querySelector(".categories");
+
     categoryBtn.addEventListener("click", () => {
       categories.classList.toggle("hidden");
     });

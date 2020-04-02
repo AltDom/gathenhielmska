@@ -7,12 +7,12 @@ if (!isset($_POST['categories'])) {
     redirect("/");
 }
 
-$taxonomies = [];
-foreach ($_POST['categories'] as $taxonomy) {
-    $taxonomies[] = $taxonomy;
+$categories = [];
+foreach ($_POST['categories'] as $category) {
+    $categories[] = $category;
 }
 
-$_SESSION['categories'] = $taxonomies;
+$_SESSION['categories'] = $categories;
 
 
 
