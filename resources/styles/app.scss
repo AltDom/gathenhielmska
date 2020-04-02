@@ -5,11 +5,16 @@
 @import "events.scss";
 @import "event-card.scss";
 @import "event-carousel.scss";
+@import "searchForm.scss";
 
 html {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+}
+
+.hidden {
+  display: none;
 }
 
 
