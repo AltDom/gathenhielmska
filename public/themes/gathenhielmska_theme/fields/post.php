@@ -1,17 +1,41 @@
 <?php
 
-if (function_exists('acf_add_local_field_group')) :
+if( function_exists('acf_add_local_field_group') ):
 
     acf_add_local_field_group(array(
-        'key' => 'group_5e788cda52266',
-        'title' => 'Post',
+        'key' => 'group_5e85bb5074819',
+        'title' => 'News',
         'fields' => array(
             array(
-                'key' => 'field_5e788e002b4c9',
+                'key' => 'field_5e85bb53a14ee',
+                'label' => 'Image',
+                'name' => 'image',
+                'type' => 'image',
+                'instructions' => '',
+                'required' => 1,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'return_format' => 'url',
+                'preview_size' => 'thumbnail',
+                'library' => 'all',
+                'min_width' => '',
+                'min_height' => '',
+                'min_size' => '',
+                'max_width' => '',
+                'max_height' => '',
+                'max_size' => '',
+                'mime_types' => '',
+            ),
+            array(
+                'key' => 'field_5e85bb6aa14ef',
                 'label' => 'Description',
                 'name' => 'description',
                 'type' => 'textarea',
-                'instructions' => 'The main content of the post.',
+                'instructions' => 'The main text of the article.',
                 'required' => 1,
                 'conditional_logic' => 0,
                 'wrapper' => array(
@@ -47,4 +71,4 @@ if (function_exists('acf_add_local_field_group')) :
         'description' => '',
     ));
 
-endif;
+    endif;
