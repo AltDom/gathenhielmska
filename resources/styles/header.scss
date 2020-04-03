@@ -1,14 +1,15 @@
 header {
   display: flex;
   justify-content: space-between;
-  background-color: #6B8280;
+  background-color: transparent;
 
   nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 8vh;
-    // font-family:     // add custom font here / maybe also a diiferent styling for the active page
+    font-family: 'DM Serif Display', serif;
+    color: #6B8280;
     font-weight: 300;
     z-index: 1;
     overflow-x: hidden;
