@@ -1,6 +1,6 @@
 <?php /* Template Name: Events */ ?>
-<?php get_header();
-session_start();
+<?php session_start();
+get_header();
 
 //get all available categories
 $categories = [];
@@ -11,19 +11,22 @@ while ($loop->have_posts()) : $loop->the_post();
     foreach ($terms as $term_single) {
         $duplicate = false;
         foreach ($categories as $category) {
-            if ($category === $term_single->slug) {
+            if ($category['slug'] === $term_single->slug) {
                 $duplicate = true;
             }
         }
         if (!$duplicate) {
-            $categories[] = $term_single->slug;
+            $categories[] = [
+                'slug' => $term_single->slug,
+                'id' => $term_single->term_id
+            ];
         }
     }
 endwhile;
 ?>
 
-<section class="event-page">
 
+<section class="event-page">
 
     <form class="searchForm" action="/search" method="post">
         <input class="searchForm__searchBar" type="text" name="title">
@@ -34,30 +37,21 @@ endwhile;
         <div class="searchForm__categoryList hidden">
             <?php foreach ($categories as $category) : ?>
 
-                <?php $checked = false; ?>
-                <?php if (isset($_SESSION['categories'])) {
-                    foreach ($_SESSION['categories'] as $checkedCategory) {
-                        if ($category === $checkedCategory) {
-                            $checked = true;
-                        }
-                    }
-                }
-                ?>
-
                 <div class="searchForm__categoryList__item">
                     <div>
-                        <label for="<?php echo $category ?>"><?php echo $category ?></label>
+                        <label for="<?php echo $category['slug'] ?>"><?php echo $category['slug'] ?></label>
                     </div>
                     <div>
-                        <input type="checkbox" id="<?php echo $category ?>" name="categories[]" value="<?php echo $category ?>" <?php echo $checked ? "checked" : "" ?>>
+                        <input type="checkbox" id="<?php echo $category['slug'] ?>" name="category" value="<?php echo $category['id'] ?>">
                     </div>
                 </div>
 
             <?php endforeach; ?>
         </div>
 
-        <div class="searchForm_optionsList">
-            <div class="searchForm_optionsList_item">
+
+        <div class="searchForm__orderList hidden">
+            <div class="searchForm__orderList__item">
                 <div>
                     <label for="new">Pågående</label>
                 </div>
@@ -65,7 +59,7 @@ endwhile;
                     <input type="radio" name="order" value="new">
                 </div>
             </div>
-            <div class="searchForm_optionsList_item">
+            <div class="searchForm__orderList__item">
                 <div>
                     <label for="old">Avslutade</label>
                 </div>
@@ -74,7 +68,7 @@ endwhile;
                 </div>
             </div>
         </div>
-        <input type="hidden" name="path" value="/events">
+        <input type="hidden" name="type" value="event">
         <button type="submit">Submit</button>
     </form>
 
@@ -86,7 +80,10 @@ endwhile;
             [
                 'taxonomy' => 'category',
                 'field'    => 'slug',
-                'terms'    => isset($_SESSION['categories']) ? $_SESSION['categories'] : $categories
+                'terms'    => [
+                    'dance',
+                    'music'
+                ]
             ]
         ],
         'meta_query' => [

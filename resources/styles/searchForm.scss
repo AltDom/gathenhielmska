@@ -24,9 +24,9 @@
       align-items: center;
     }
   }
-  .searchForm__categoryList, .searchForm_optionsList {
+  .searchForm__categoryList, .searchForm__orderList {
     width: 100%;
-    .searchForm__categoryList__item, .searchForm_optionsList_item{
+    .searchForm__categoryList__item, .searchForm__orderList__item{
       border: 1px solid black;
       width: 100%;
       display: flex;

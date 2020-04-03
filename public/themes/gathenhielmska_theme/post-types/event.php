@@ -21,5 +21,6 @@ add_action('init', function () {
         'menu_icon' => 'dashicons-tickets',
         'menu_position' => 19,
         'public' => true,
+        'show_in_rest' => true
     ]);
 });
