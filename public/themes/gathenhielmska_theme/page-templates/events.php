@@ -25,13 +25,13 @@ endwhile;
 <section class="event-page">
 
 
-    <form class="search-form" action="/search" method="post">
-        <input class="search-bar" type="text" name="title">
-        <div class="options">
-            <div class="sort-by-options">Sortera Efter</div>
-            <div class="category-options">Kategori</div>
+    <form class="searchForm" action="/search" method="post">
+        <input class="searchForm__searchBar" type="text" name="title">
+        <div class="searchForm__options">
+            <div class="searchForm__options__orderBtn">Sortera Efter</div>
+            <div class="searchForm__options__categoryBtn">Kategori</div>
         </div>
-        <div class="categories hidden">
+        <div class="searchForm__categoryList hidden">
             <?php foreach ($categories as $category) : ?>
 
                 <?php $checked = false; ?>
@@ -43,16 +43,36 @@ endwhile;
                     }
                 }
                 ?>
-                <div class="category">
+
+                <div class="searchForm__categoryList__item">
                     <div>
                         <label for="<?php echo $category ?>"><?php echo $category ?></label>
                     </div>
                     <div>
                         <input type="checkbox" id="<?php echo $category ?>" name="categories[]" value="<?php echo $category ?>" <?php echo $checked ? "checked" : "" ?>>
                     </div>
-
                 </div>
+
             <?php endforeach; ?>
+        </div>
+
+        <div class="searchForm_optionsList">
+            <div class="searchForm_optionsList_item">
+                <div>
+                    <label for="new">Pågående</label>
+                </div>
+                <div>
+                    <input type="radio" name="order" value="new">
+                </div>
+            </div>
+            <div class="searchForm_optionsList_item">
+                <div>
+                    <label for="old">Avslutade</label>
+                </div>
+                <div>
+                    <input type="radio" name="order" value="old">
+                </div>
+            </div>
         </div>
         <input type="hidden" name="path" value="/events">
         <button type="submit">Submit</button>
@@ -68,7 +88,18 @@ endwhile;
                 'field'    => 'slug',
                 'terms'    => isset($_SESSION['categories']) ? $_SESSION['categories'] : $categories
             ]
-        ]
+        ],
+        'meta_query' => [
+            [
+                'key' => 'date',
+                'value' => date('Y-m-d'),
+                'compare' => isset($_POST['compare']) ? $_POST['compare'] : '>',
+                'type' => 'DATE'
+            ]
+        ],
+        'meta_key' => 'date',
+        'orderby' => 'meta_value',
+        'order' => isset($_POST['order']) ? $_POST['order'] : 'ASC'
     ]);
     ?>
 
