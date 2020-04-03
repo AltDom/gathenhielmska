@@ -49,6 +49,25 @@ if( function_exists('acf_add_local_field_group') ):
                 'rows' => '',
                 'new_lines' => '',
             ),
+            array(
+                'key' => 'field_5e8735e4a34ee',
+                'label' => 'Tagline',
+                'name' => 'tagline',
+                'type' => 'text',
+                'instructions' => '',
+                'required' => 1,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'default_value' => '',
+                'placeholder' => '',
+                'prepend' => '',
+                'append' => '',
+                'maxlength' => '',
+            ),
         ),
         'location' => array(
             array(
@@ -71,4 +90,4 @@ if( function_exists('acf_add_local_field_group') ):
         'description' => '',
     ));
 
-    endif;
+endif;
