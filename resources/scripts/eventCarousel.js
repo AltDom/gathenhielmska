@@ -15,7 +15,6 @@ const eventCarousel = () => {
     eventCarousel.prepend(
       carouselChildren[carouselChildren.length - 1].cloneNode(true)
     );
-    //denna kan tas bort tror jag
     eventCarousel.prepend(
       carouselChildren[carouselChildren.length - 2].cloneNode(true)
     );
