@@ -13,7 +13,8 @@
         "johnbillion/extended-cpts": "^4.3",
         "roots/soil": "^3.9",
         "wordplate/framework": "^8.0",
-        "wordplate/plate": "^6.0"
+        "wordplate/plate": "^6.0",
+        "wpackagist-plugin/acf-to-rest-api": "^3.2"
     },
     "config": {
         "optimize-autoloader": true,

@@ -20,12 +20,12 @@ const searchForm = () => {
       categoryList.classList.add("hidden");
     });
 
-    const getURI = form => {
+    const getURI = (form) => {
       const inputs = form.querySelectorAll("input");
       let postType = "";
       let category = "";
 
-      Array.from(inputs).forEach(input => {
+      Array.from(inputs).forEach((input) => {
         console.log(input);
         if (input.name === "type") {
           postType += input.value;
@@ -46,17 +46,17 @@ const searchForm = () => {
       return "/wordpress/wp-json/wp/v2/event?category=3,4";
     };
 
-    const handleResponse = res => {
-      // console.log(res);
+    const handleResponse = (res) => {
+      console.log(res);
     };
 
-    searchForm.addEventListener("submit", e => {
+    searchForm.addEventListener("submit", (e) => {
       e.preventDefault();
       // const form = new FormData(searchForm);
       const uri = getURI(searchForm);
       fetch(uri)
-        .then(res => res.json())
-        .then(res => handleResponse(res));
+        .then((res) => res.json())
+        .then((res) => handleResponse(res));
     });
   }
 };
