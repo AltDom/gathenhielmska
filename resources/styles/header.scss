@@ -10,10 +10,18 @@ header {
     height: 8vh;
     font-family: 'DM Serif Display', serif;
     color: #6B8280;
-    font-weight: 300;
+    font-size: 16px;
     z-index: 1;
     overflow-x: hidden;
     width: 100%;
+  }
+
+  .logo {
+    margin: 4%;
+  }
+
+  .hamburger {
+    margin: 3%;
   }
 
   .menu {
@@ -31,7 +39,6 @@ header {
     width: 100%;
     transform: translateX(100%);
     transition: transform 0.3s ease;
-    padding-left: 20px;
     z-index: 1;
   }
 
@@ -51,21 +58,32 @@ header {
     letter-spacing: 2px;
   }
 
+  .menu ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 0 40px 0;
+  }
+
   .menu li {
     list-style: none;
-    margin: 20px 0;
+    font-family: 'DM Serif Display', serif;
+    font-size: 16px;
+    margin: 15px 0;
     opacity: 0;
   }
 
   .close {
     display: none;
-    top: 75vh;
-    left: 48vw;
+    top: 85vh;
+    left: 46vw;
     z-index: 2;
   }
 
   .nav-active {
     display: flex;
+    justify-content: center;
+    align-items: center;
     transform: translateX(0%);
     position: fixed;
     overflow-x: hidden;
