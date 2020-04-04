@@ -93,3 +93,26 @@ if (!function_exists('redirect')) {
         exit;
     }
 }
+
+//search meta values in rest
+//https://gist.github.com/maheshwaghmare/0bbe5eabceed24aa76ef1eabe684a748
+if (!function_exists('post_meta_request_params')) :
+    function post_meta_request_params($args, $request)
+    {
+        $args += array(
+            $compare = $request['compare'],
+            'meta_key'   => 'date',
+            'meta_query' => [
+                'key' => 'date',
+                'value' => date('Y-m-d'),
+                'compare' => $compare,
+                'type' => 'DATE'
+            ],
+        );
+
+        return $args;
+    }
+    add_filter('rest_event_query', 'post_meta_request_params', 99, 2); // Add support for `my-custom-post`
+// add_filter('rest_post_query', 'post_meta_request_params', 99, 2);
+// add_filter( 'rest_page_query', 'post_meta_request_params', 99, 2 ); // Add support for `page`
+endif;
