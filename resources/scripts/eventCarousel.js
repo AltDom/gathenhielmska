@@ -1,7 +1,7 @@
 "use_strict";
 
 const eventCarousel = () => {
-  const eventCarousel = document.querySelector(".event-carousel-container");
+  const eventCarousel = document.querySelector(".eventCarousel");
   if (eventCarousel != null) {
     const carouselChildren = Array.from(eventCarousel.children);
 
@@ -27,7 +27,7 @@ const eventCarousel = () => {
       itemWidth + (itemWidth - (window.innerWidth - itemWidth) / 2);
 
     //looping effect
-    const handleScroll = e => {
+    const handleScroll = (e) => {
       const offset = itemWidth - (window.innerWidth - itemWidth);
       let minScroll = itemWidth + offset;
       let maxScroll =

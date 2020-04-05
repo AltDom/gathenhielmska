@@ -24,7 +24,7 @@ while ($loop->have_posts()) : $loop->the_post();
 endwhile;
 ?>
 
-<section class="event-page">
+<section class="eventPage">
 
     <form class="searchForm" action="/search" method="post">
         <input class="searchForm__searchBar" type="text" name="title">
@@ -47,14 +47,13 @@ endwhile;
             <?php endforeach; ?>
         </div>
 
-
         <div class="searchForm__orderList hidden">
             <div class="searchForm__orderList__item">
                 <div>
                     <label for="new">Pågående</label>
                 </div>
                 <div>
-                    <input type="radio" name="order" value="new">
+                    <input type="radio" name="order" value="new" checked>
                 </div>
             </div>
             <div class="searchForm__orderList__item">
@@ -70,54 +69,7 @@ endwhile;
         <button type="submit">Submit</button>
     </form>
 
-    <?php
-    //get initial events
-    $the_query = new WP_Query([
-        'posts_per_page' => 8,
-        'post_type' => 'event',
-        'meta_query' => [
-            [
-                'key' => 'date',
-                'value' => date('Y-m-d'),
-                'compare' => '>',
-                'type' => 'DATE'
-            ]
-        ],
-        'meta_key' => 'date',
-        'orderby' => 'meta_value',
-        'order' => 'ASC'
-    ]);
-    ?>
-
-    <?php if ($the_query->have_posts()) : ?>
-        <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
-            <?php $categories = get_the_terms($post, 'category');  ?>
-
-            <div class="event-card">
-                <?php if ($categories) : ?>
-                    <?php foreach ($categories as $category) : ?>
-                        <p><?php echo $category->name ?></p>
-                    <?php endforeach; ?>
-                <?php endif; ?>
-                <a href="<?php the_permalink(); ?>">
-                    <h2><?php the_title(); ?></h2>
-                </a>
-
-                <p><?php echo customFieldExcerpt(get_field("description")); ?></p>
-
-                <p><?php the_field("date"); ?></p>
-                <p><?php the_field("start_time"); ?></p>
-
-            </div>
-
-
-        <?php endwhile; ?>
-        <?php wp_reset_postdata(); ?>
-
-    <?php else : ?>
-        <!-- dont know what the __() is about -->
-        <p><?php __('No News'); ?></p>
-    <?php endif; ?>
+    <div class="eventContainer"></div>
 
 
 

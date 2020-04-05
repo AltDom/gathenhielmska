@@ -3,14 +3,14 @@
   background: transparent;  /* Optional: just make scrollbar invisible */
 }
 
-.event-carousel-container {
+.eventCarousel {
   display: flex;
   flex-wrap: nowrap;
   overflow-x: auto;
   width: 100vw;
 }
 
-.event-carousel-item {
+.eventCarousel__item {
   flex: 0 0 auto;
   height: 100%;
   width: 240px;

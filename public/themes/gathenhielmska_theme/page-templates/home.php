@@ -23,11 +23,11 @@ $the_query = new WP_Query([
 
 <?php if ($the_query->have_posts()) : ?>
 
-    <div class="event-carousel-container">
+    <div class="eventCarousel">
         <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
 
-            <div class="event-carousel-item">
-                <div class="event-card">
+            <div class="eventCarousel__item">
+                <div class="eventCard">
                     <h3><?php the_title(); ?></h3>
                     <p><?php echo customFieldExcerpt(get_field("description")); ?></p>
                     <p><?php the_field("date"); ?></p>

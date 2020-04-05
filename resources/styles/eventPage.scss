@@ -1,0 +1,18 @@
+.eventPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h2 {
+    color: green;
+  }
+  .eventCard {
+    margin: 20px 40px;
+  }
+  .eventContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
