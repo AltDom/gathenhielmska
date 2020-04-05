@@ -58,8 +58,8 @@ const header = () => {
       });
 
       // Make languages active and set event listener for toggling
-      languages.classList.toggle("nav-active");
-      setLanguageEventListener();
+      // languages.classList.toggle("nav-active");
+      // setLanguageEventListener();
 
       nav.style.animation = `navFade 250ms ease`;
 
