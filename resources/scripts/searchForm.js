@@ -6,6 +6,7 @@ const searchForm = () => {
     const categoryBtn = searchForm.querySelector(
       ".searchForm__options__categoryBtn"
     );
+    //form buttons
     const orderBtn = searchForm.querySelector(".searchForm__options__orderBtn");
     const categoryList = searchForm.querySelector(".searchForm__categoryList");
     const orderList = searchForm.querySelector(".searchForm__orderList");
@@ -20,34 +21,60 @@ const searchForm = () => {
       categoryList.classList.add("hidden");
     });
 
-    const getURI = (form) => {
+    //getting json data
+    let uri = "";
+    let postType = "";
+    let page = 2;
+
+    const createUri = (form) => {
       const inputs = form.querySelectorAll("input");
-      let postType = "";
       let category = "";
+      let order = "";
+      let search = "";
 
       Array.from(inputs).forEach((input) => {
-        console.log(input);
         if (input.name === "type") {
-          postType += input.value;
+          postType = input.value;
         }
+      });
+
+      Array.from(inputs).forEach((input) => {
         if (input.name === "category" && input.checked === true) {
           if (category === "") {
-            category += `?category=${input.value}`;
+            category = `category=${input.value}`;
           } else {
             category += `,${input.value}`;
           }
         }
+
+        if (input.name === "order" && input.checked === true) {
+          if (postType === "event") {
+            if (input.value === "old") {
+              order = "compare=<&order=desc";
+            } else {
+              order = "compare=>&order=asc";
+            }
+          }
+          if (postType === "posts") {
+            if (input.value === "old") {
+              order = "order=asc";
+            } else {
+              order = "order=desc";
+            }
+          }
+        }
+
+        if (input.name === "search") {
+          if (input.value.length > 0) {
+            search = `search=${input.value}`;
+          }
+        }
       });
 
-      const testUri =
-        "testURI: /wordpress/wp-json/wp/v2/" + postType + category;
-      console.log(testUri);
+      const args = [category, order, search].filter((arg) => arg.length > 0);
+      const queryString = `${postType}?${args.join("&")}`;
 
-      //uri for posts example
-      ///wordpress/wp-json/wp/v2/posts?category=3,2&order=desc&per_page=5&page=2
-
-      //search verkar vara slug
-      return "/wordpress/wp-json/wp/v2/event?category=3&compare=>&order=asc&per_page=2&page=1&search=rock";
+      return `/wordpress/wp-json/wp/v2/${queryString}&per_page=5`;
     };
 
     const handleResponse = (res) => {
@@ -56,12 +83,15 @@ const searchForm = () => {
 
     searchForm.addEventListener("submit", (e) => {
       e.preventDefault();
-      const uri = getURI(searchForm);
+      uri = createUri(searchForm);
+      page = 2;
       fetch(uri)
         .then((res) => res.json())
         .then((res) => handleResponse(res));
     });
   }
+  //submit form on page load with submit-event
+  searchForm.requestSubmit();
 };
 
 export default searchForm;

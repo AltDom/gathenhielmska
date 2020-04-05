@@ -27,7 +27,7 @@ endwhile;
 <section class="eventPage">
 
     <form class="searchForm" action="/search" method="post">
-        <input class="searchForm__searchBar" type="text" name="title">
+        <input class="searchForm__searchBar" type="text" name="search">
         <div class="searchForm__options">
             <div class="searchForm__options__orderBtn">Sortera Efter</div>
             <div class="searchForm__options__categoryBtn">Kategori</div>
