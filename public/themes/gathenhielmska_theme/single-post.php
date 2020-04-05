@@ -17,7 +17,7 @@ $categories = get_the_terms($post, 'category'); ?>
                 </div>
                 <h1 class="single-news-title"><?php the_title(); ?></h1>
                 <p class="single-news-tagline"><?php echo customFieldExcerpt(get_field("tagline"), 20, ""); ?></p>
-                <p class="single-news-text"><?php echo customFieldExcerpt(get_field("description"), 100); ?></p>
+                <p class="single-news-text"><?php echo customFieldExcerpt(get_field("description"), 1000, ""); ?></p>
             </div>
         </div>
     <!-- </article> -->

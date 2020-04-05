@@ -1,0 +1,34 @@
+.mediaSelect {
+  display: flex;
+  justify-content: space-around;
+  color: black;
+  z-index: 2;
+}
+
+.pictures.active,
+.videos.active {
+  color: #1F3634;
+}
+
+.display-none {
+  display: none;
+}
+
+.pictures {
+  margin-left: 100px;
+  color: #C4C4C4;
+  font-family: 'DM Serif Display', serif;
+  font-size: 16px;
+}
+
+.videos {
+  margin-right: 100px;
+  color: #C4C4C4;
+  font-family: 'DM Serif Display', serif;
+  font-size: 16px;
+}
+
+.divider {
+  color: #1F3634;
+  font-size: 16px;
+}
