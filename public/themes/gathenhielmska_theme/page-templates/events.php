@@ -1,6 +1,5 @@
 <?php /* Template Name: Events */ ?>
-<?php session_start();
-get_header();
+<?php get_header();
 
 //get all available categories
 $categories = [];
@@ -24,7 +23,6 @@ while ($loop->have_posts()) : $loop->the_post();
     }
 endwhile;
 ?>
-
 
 <section class="event-page">
 
@@ -73,30 +71,21 @@ endwhile;
     </form>
 
     <?php
+    //get initial events
     $the_query = new WP_Query([
         'posts_per_page' => 8,
         'post_type' => 'event',
-        'tax_query' => [
-            [
-                'taxonomy' => 'category',
-                'field'    => 'slug',
-                'terms'    => [
-                    'dance',
-                    'music'
-                ]
-            ]
-        ],
         'meta_query' => [
             [
                 'key' => 'date',
                 'value' => date('Y-m-d'),
-                'compare' => isset($_POST['compare']) ? $_POST['compare'] : '>',
+                'compare' => '>',
                 'type' => 'DATE'
             ]
         ],
         'meta_key' => 'date',
         'orderby' => 'meta_value',
-        'order' => isset($_POST['order']) ? $_POST['order'] : 'ASC'
+        'order' => 'ASC'
     ]);
     ?>
 
@@ -136,6 +125,5 @@ endwhile;
 
 </section>
 
-<?php session_destroy(); ?>
 
 <?php get_footer(); ?>

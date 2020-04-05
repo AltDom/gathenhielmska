@@ -43,7 +43,11 @@ const searchForm = () => {
         "testURI: /wordpress/wp-json/wp/v2/" + postType + category;
       console.log(testUri);
 
-      return "/wordpress/wp-json/wp/v2/event?category=3,4";
+      //uri for posts example
+      ///wordpress/wp-json/wp/v2/posts?category=3,2&order=desc&per_page=5&page=2
+
+      //search verkar vara slug
+      return "/wordpress/wp-json/wp/v2/event?category=3&compare=>&order=asc&per_page=2&page=1&search=rock";
     };
 
     const handleResponse = (res) => {
@@ -52,7 +56,6 @@ const searchForm = () => {
 
     searchForm.addEventListener("submit", (e) => {
       e.preventDefault();
-      // const form = new FormData(searchForm);
       const uri = getURI(searchForm);
       fetch(uri)
         .then((res) => res.json())
