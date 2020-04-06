@@ -27,6 +27,9 @@ $categories = get_the_terms($post, 'category'); ?>
             <p>Nothing to see.</p>
         </article>
     <?php endif; ?>
+    <div class="back-to-articles">
+        <a class="seeMoreStyling" href="<?php echo get_post_type_archive_link( 'post' ); ?>">tillbaks till artiklar</a>
+    </div>
 </main>
 
 <?php get_footer();
