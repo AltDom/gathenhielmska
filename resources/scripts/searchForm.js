@@ -1,4 +1,5 @@
-"use_strict";
+("use_strict");
+import createEventCard from "./functions/createEventCard";
 
 const searchForm = () => {
   const searchForm = document.querySelector(".searchForm");
@@ -10,6 +11,9 @@ const searchForm = () => {
     const orderBtn = searchForm.querySelector(".searchForm__options__orderBtn");
     const categoryList = searchForm.querySelector(".searchForm__categoryList");
     const orderList = searchForm.querySelector(".searchForm__orderList");
+    const loadMoreBtn = document.querySelector(".loadMoreBtn");
+    const noMoreMessage = document.querySelector(".noMoreMessage");
+    const eventContainer = document.querySelector(".eventContainer");
 
     categoryBtn.addEventListener("click", () => {
       categoryList.classList.toggle("hidden");
@@ -74,24 +78,57 @@ const searchForm = () => {
       const args = [category, order, search].filter((arg) => arg.length > 0);
       const queryString = `${postType}?${args.join("&")}`;
 
+      console.log(`/wordpress/wp-json/wp/v2/${queryString}&per_page=5`);
+
       return `/wordpress/wp-json/wp/v2/${queryString}&per_page=5`;
     };
 
     const handleResponse = (res) => {
       console.log(res);
+
+      if (res.length === 0 || res.length === undefined) {
+        loadMoreBtn.classList.add("hidden");
+        noMoreMessage.classList.remove("hidden");
+        return;
+      }
+      if (postType === "event") {
+        res.forEach((event) => {
+          const eventCard = createEventCard(event);
+          eventContainer.appendChild(eventCard);
+        });
+      }
+
+      if (postType === "posts") {
+        //append posts
+      }
     };
 
     searchForm.addEventListener("submit", (e) => {
       e.preventDefault();
       uri = createUri(searchForm);
       page = 2;
+      eventContainer.innerHTML = "";
+      loadMoreBtn.classList.remove("hidden");
+      noMoreMessage.classList.add("hidden");
+
       fetch(uri)
         .then((res) => res.json())
         .then((res) => handleResponse(res));
     });
+
+    loadMoreBtn.addEventListener("click", () => {
+      const nextPage = uri + `&page=${page}`;
+      page++;
+      console.log(nextPage);
+
+      fetch(nextPage)
+        .then((res) => res.json())
+        .then((res) => handleResponse(res));
+    });
+
+    //submit form on page load with submit-event
+    searchForm.requestSubmit();
   }
-  //submit form on page load with submit-event
-  // searchForm.requestSubmit();
 };
 
 export default searchForm;
