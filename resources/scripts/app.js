@@ -1,11 +1,11 @@
 "use_strict";
 
-import eventCarousel from "./eventCarousel";
 import header from "./header";
 import searchForm from "./searchForm";
 import mediaSelection from "./archive";
+import fillEventCarousel from "./fillEventCarousel";
 
 header();
-eventCarousel();
 searchForm();
+fillEventCarousel();
 mediaSelection();

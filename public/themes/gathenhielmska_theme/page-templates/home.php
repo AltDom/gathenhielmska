@@ -26,15 +26,6 @@ $the_query = new WP_Query([
     <div class="eventCarousel">
         <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
 
-            <div class="eventCarousel__item">
-                <div class="eventCard">
-                    <h3><?php the_title(); ?></h3>
-                    <p><?php echo customFieldExcerpt(get_field("description")); ?></p>
-                    <p><?php the_field("date"); ?></p>
-                    <p><?php the_field("time"); ?></p>
-                </div>
-            </div>
-
         <?php endwhile; ?>
     </div>
     <?php wp_reset_postdata(); ?>

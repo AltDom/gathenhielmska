@@ -1,6 +1,6 @@
 "use_strict";
 
-const eventCarousel = () => {
+const activateEventCarousel = () => {
   const eventCarousel = document.querySelector(".eventCarousel");
   if (eventCarousel != null) {
     const carouselChildren = Array.from(eventCarousel.children);
@@ -44,4 +44,4 @@ const eventCarousel = () => {
   }
 };
 
-export default eventCarousel;
+export default activateEventCarousel;
