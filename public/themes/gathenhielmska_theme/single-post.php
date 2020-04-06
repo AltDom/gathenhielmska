@@ -13,7 +13,7 @@ $categories = get_the_terms($post, 'category'); ?>
                             <?php echo strtoupper($category->name); ?>
                         <?php endforeach; ?>
                     </p>
-                    <p class="news-date"><?php echo get_the_date('d/m-y'); ?></p>
+                    <p class="single-news-date"><?php echo get_the_date('d/m-y'); ?></p>
                 </div>
                 <h1 class="single-news-title"><?php the_title(); ?></h1>
                 <p class="single-news-tagline"><?php echo customFieldExcerpt(get_field("tagline"), 20, ""); ?></p>
