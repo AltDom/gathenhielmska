@@ -64,6 +64,12 @@
   margin: 20px 0 10px 0;
 }
 
+.single-news-date {
+  font-family: 'DM Serif Display', serif;
+  font-size: 16px;
+  margin: 0;
+}
+
 .news-title {
   margin: 10px 0;
   font-family: 'DM Serif Display', serif;
@@ -75,11 +81,13 @@
   font-family: 'DM Serif Display', serif;
   font-size: 24px;
   white-space: nowrap;
+  padding-bottom: 15px;
   border-bottom: 1px solid black;
 }
 
 .news-category {
   color: #6B8280; // linblå
+  margin: 0;
 }
 
 .news-post-box {
@@ -93,14 +101,13 @@
 }
 
 a {
-
   color: #333333;
   text-decoration: none;
 }
 
 a:hover
 {
-  color: #0060B6;
+  color: #1F3634;
   text-decoration: none;
   cursor: pointer;
 }

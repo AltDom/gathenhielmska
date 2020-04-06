@@ -91,7 +91,7 @@ const searchForm = () => {
     });
   }
   //submit form on page load with submit-event
-  searchForm.requestSubmit();
+  // searchForm.requestSubmit();
 };
 
 export default searchForm;

@@ -53,13 +53,26 @@ const mediaSelection = () => {
   seeMoreVideos.innerHTML = `se fler    <svg width="22" height="12" viewBox="0 0 22 12" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M1 1L11 11L21 1" stroke="black"/>
     </svg>`;
+  seeMoreVideos.addEventListener("click", () => {
+    setTimeout(function (){
+      const youtubeItems = document.querySelectorAll(".sby_item");
+      youtubeItems.forEach(youtubeItem => {
+        youtubeItem.style.width = '90%';
+        youtubeItem.style.margin = '15px 20px 15px 20px';
+        youtubeItem.style.zIndex = '0';
+      });
+    }, 100);
+  })
   const youtubeItems = document.querySelectorAll(".sby_item");
   youtubeItems.forEach(youtubeItem => {
     youtubeItem.style.width = '90%';
     youtubeItem.style.margin = '15px 20px 15px 20px';
+    youtubeItem.style.zIndex = '0';
   });
   const youtubeVideos = document.querySelector(".sb_youtube");
   youtubeVideos.style.padding = "0 0 16px 0";
+
+
 
 
   setMediaEventListener();
