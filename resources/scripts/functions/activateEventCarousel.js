@@ -7,6 +7,7 @@ const activateEventCarousel = () => {
       console.log(
         "activateEventCarousel.js row 7, add something here for handeling no events of same category available and carousel is empty"
       );
+      return;
     }
 
     const carouselChildren = Array.from(eventCarousel.children);
