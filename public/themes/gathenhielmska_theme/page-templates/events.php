@@ -69,17 +69,9 @@ endwhile;
         <button type="submit">Submit</button>
     </form>
 
-
     <div class="eventContainer"></div>
-
-    <div class="eventCarousel"></div>
-
     <p class="noMoreMessage hidden">No more events</p>
     <button class="loadMoreBtn hidden">Load More</button>
-
-
-
-
 
 </section>
 
