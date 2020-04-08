@@ -1,7 +1,7 @@
 .searchForm {
   width: 90vw;
-  display: flex;
   @include flexCenterCenter;
+  flex-direction: column;
   margin-top: 40px;
   .searchForm__searchBar {
     height: 2em;
