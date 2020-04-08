@@ -38,27 +38,7 @@ $the_query = new WP_Query([
 <!-- Events -->
 <h2>kommande evenemang</h2>
 
-<?php
-$the_query = new WP_Query([
-    'post_type' => 'event',
-    'posts_per_page' => 3
-]);
-?>
-
-
-<?php if ($the_query->have_posts()) : ?>
-
-    <div class="eventCarousel">
-        <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
-
-        <?php endwhile; ?>
-    </div>
-    <?php wp_reset_postdata(); ?>
-
-<?php else : ?>
-    <p><?php __('No News'); ?></p>
-<?php endif; ?>
-
+<div class="eventCarousel"></div>
 
 
 

@@ -30,19 +30,19 @@ const searchForm = () => {
     let postType = "";
     let page = 2;
 
-    const createUri = (form) => {
+    const createUri = form => {
       const inputs = form.querySelectorAll("input");
       let category = "";
       let order = "";
       let search = "";
 
-      Array.from(inputs).forEach((input) => {
+      Array.from(inputs).forEach(input => {
         if (input.name === "type") {
           postType = input.value;
         }
       });
 
-      Array.from(inputs).forEach((input) => {
+      Array.from(inputs).forEach(input => {
         if (input.name === "category" && input.checked === true) {
           if (category === "") {
             category = `category=${input.value}`;
@@ -75,24 +75,20 @@ const searchForm = () => {
         }
       });
 
-      const args = [category, order, search].filter((arg) => arg.length > 0);
+      const args = [category, order, search].filter(arg => arg.length > 0);
       const queryString = `${postType}?${args.join("&")}`;
-
-      console.log(`/wordpress/wp-json/wp/v2/${queryString}&per_page=5`);
 
       return `/wordpress/wp-json/wp/v2/${queryString}&per_page=5`;
     };
 
-    const handleResponse = (res) => {
-      console.log(res);
-
+    const handleResponse = res => {
       if (res.length === 0 || res.length === undefined) {
         loadMoreBtn.classList.add("hidden");
         noMoreMessage.classList.remove("hidden");
         return;
       }
       if (postType === "event") {
-        res.forEach((event) => {
+        res.forEach(event => {
           const eventCard = createEventCard(event);
           eventContainer.appendChild(eventCard);
         });
@@ -103,7 +99,7 @@ const searchForm = () => {
       }
     };
 
-    searchForm.addEventListener("submit", (e) => {
+    searchForm.addEventListener("submit", e => {
       e.preventDefault();
       uri = createUri(searchForm);
       page = 2;
@@ -112,8 +108,8 @@ const searchForm = () => {
       noMoreMessage.classList.add("hidden");
 
       fetch(uri)
-        .then((res) => res.json())
-        .then((res) => handleResponse(res));
+        .then(res => res.json())
+        .then(res => handleResponse(res));
     });
 
     loadMoreBtn.addEventListener("click", () => {
@@ -122,8 +118,8 @@ const searchForm = () => {
       console.log(nextPage);
 
       fetch(nextPage)
-        .then((res) => res.json())
-        .then((res) => handleResponse(res));
+        .then(res => res.json())
+        .then(res => handleResponse(res));
     });
 
     //submit form on page load with submit-event

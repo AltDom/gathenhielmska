@@ -1,28 +1,22 @@
 <?php get_header();
-$categories = get_the_terms($post, 'category'); ?>
+$categories = get_the_terms($post, 'category');
 
-<main role="main">
-    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-            <article>
-                <?php if ($categories) : ?>
-                    <?php foreach ($categories as $category) : ?>
-                        <p><?php echo $category->name ?></p>
-                    <?php endforeach; ?>
-                <?php endif; ?>
+$categoryIds = "";
+$categoryNames = "";
+foreach ($categories as $category) {
+    $categoryIds .= $category->term_taxonomy_id . ",";
+    $categoryNames .= $category->name . ", ";
+}
+$categoryIds = trim($categoryIds, ',');
+$categoryNames = trim($categoryNames, ', ');
+?>
 
-                <h1><?php the_title(); ?></h1>
-                <p><?php the_field("description"); ?></p>
-                <?php  ?>
-                <p><?php the_field("date"); ?></p>
-                <p><?php the_field("time"); ?></p>
+<input class="eventId" type="hidden" name="eventId" value="<?php the_ID(); ?>">
+<input class="categoryIds" type="hidden" name="categoryIds" value="<?php echo $categoryIds; ?>">
+<input class="categoryNames" type="hidden" name="categoryNames" value="<?php echo $categoryNames; ?>">
 
-            </article>
-        <?php endwhile;
-    else : ?>
-        <article>
-            <p>Nothing to see.</p>
-        </article>
-    <?php endif; ?>
-</main>
+<div class="singleEvent"></div>
+<div class="eventCarousel"></div>
+
 
 <?php get_footer();

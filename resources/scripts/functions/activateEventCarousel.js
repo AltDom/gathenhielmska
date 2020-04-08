@@ -3,6 +3,13 @@
 const activateEventCarousel = () => {
   const eventCarousel = document.querySelector(".eventCarousel");
   if (eventCarousel != null) {
+    if (eventCarousel.children.length === 0) {
+      console.log(
+        "activateEventCarousel.js row 7, add something here for handeling no events of same category available and carousel is empty"
+      );
+      return;
+    }
+
     const carouselChildren = Array.from(eventCarousel.children);
 
     if (eventCarousel.children.length == 1) {
@@ -27,7 +34,7 @@ const activateEventCarousel = () => {
       itemWidth + (itemWidth - (window.innerWidth - itemWidth) / 2);
 
     //looping effect
-    const handleScroll = (e) => {
+    const handleScroll = e => {
       const offset = itemWidth - (window.innerWidth - itemWidth);
       let minScroll = itemWidth + offset;
       let maxScroll =
