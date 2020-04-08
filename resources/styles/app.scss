@@ -1,5 +1,10 @@
 /* WordPlate */
 
+// import mixins, colors and fonts (via mixins)
+@import "assets/colors.scss";
+@import "assets/mixins.scss";
+
+// import page styling
 @import "main.scss";
 @import "header.scss";
 @import "eventPage.scss";

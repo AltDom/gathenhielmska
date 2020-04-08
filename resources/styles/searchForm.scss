@@ -1,38 +1,30 @@
 .searchForm {
   width: 90vw;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include flexCenterCenter;
   margin-top: 40px;
   .searchForm__searchBar {
     height: 2em;
     width: 100%;
     margin-bottom: 10px;
-    border: 1px solid black;
+    border: 1px solid $black;
   }
   .searchForm__options {
     width: 100%;
-    display: flex;
-    flex-direction: row;
-    background-color: white;
+    @include flexRow;
+    background-color: $white;
     div {
-      border: 1px solid black;
+      border: 1px solid $black;
       width: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      @include flexCenterCenter;
     }
   }
   .searchForm__categoryList, .searchForm__orderList {
     width: 100%;
     .searchForm__categoryList__item, .searchForm__orderList__item{
-      border: 1px solid black;
+      border: 1px solid $black;
       width: 100%;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
+      @include flexRowJustifyBetweenAlignCenter;
     }
   }
 }

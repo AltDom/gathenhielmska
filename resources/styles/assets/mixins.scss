@@ -1,0 +1,61 @@
+// Import fonts
+@import 'fonts.scss';
+
+// Define Mixins
+@mixin H1 {
+  font-family: $H1;
+  font-size: 24px;
+}
+
+@mixin H2 {
+  font-family: $H2;
+  font-size: 16px;
+}
+
+@mixin paragraph {
+  font-family: $paragraph;
+  font-weight: 400; //regular
+  font-size: 16px;
+  line-height: 22px;
+}
+
+@mixin tagline {
+  font-family: $paragraph;
+  font-weight: 500; //medium
+  font-size: 16px;
+  line-height: 22px;
+}
+
+@mixin flexJustifyBetween {
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin flexJustifyAround {
+  display: flex;
+  justify-content: space-around;
+}
+
+@mixin flexRow {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin flexCenterCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flexRowJustifyBetweenAlignCenter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flexColumnAlignCenter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

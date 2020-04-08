@@ -1,16 +1,13 @@
 header {
-  display: flex;
-  justify-content: space-between;
+  @include flexJustifyBetween;
   background-color: transparent;
 
   nav {
-    display: flex;
-    justify-content: space-between;
+    @include flexJustifyBetween;
     align-items: center;
     height: 8vh;
-    font-family: 'DM Serif Display', serif;
-    color: #6B8280;
-    font-size: 16px;
+    @include H2;
+    color: $lineBlue;
     z-index: 1;
     overflow-x: hidden;
     width: 100%;
@@ -26,16 +23,16 @@ header {
 
   .menu {
     display: none;
-    position: absolute;
-    right: 0px;
-    height: 100vh;
-    top: 0vh;
-    background-color: #6B8280; // linblå
-    width: 100vw;
-    overflow: hidden;
-    overflow-x: hidden;
     flex-direction: column;
     align-items: flex-start;
+    position: absolute;
+    top: 0vh;
+    right: 0px;
+    height: 100vh;
+    width: 100vw;
+    background-color: $lineBlue;
+    overflow: hidden;
+    overflow-x: hidden;
     width: 100%;
     transform: translateX(100%);
     transition: transform 0.3s ease;
@@ -43,22 +40,19 @@ header {
   }
 
   .menu a {
-    color: #F3F0E8; // vågskumsvit
+    color: $whitewashWhite;
     text-decoration: none;
     letter-spacing: 2px;
   }
 
   .menu ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flexColumnAlignCenter;
     margin: 0 0 40px 0;
   }
 
   .menu li {
     list-style: none;
-    font-family: 'DM Serif Display', serif;
-    font-size: 16px;
+    @include H2;
     margin: 15px 0;
     opacity: 0;
   }
@@ -66,14 +60,12 @@ header {
   .close {
     display: none;
     top: 85vh;
-    left: 46vw;
+    left: 48vw;
     z-index: 2;
   }
 
   .nav-active {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flexCenterCenter;
     transform: translateX(0%);
     position: fixed;
     overflow-x: hidden;

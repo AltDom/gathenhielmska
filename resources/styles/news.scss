@@ -22,71 +22,59 @@
 }
 
 .news-category-date-box {
-  display: flex;
-  justify-content: space-between;
+  @include flexJustifyBetween;
 }
 
 .news-text {
   margin-bottom: 25px;
-  line-height: 22px;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400; //regular
-  // font-size: 16;
+  @include paragraph;
 }
 
 .single-news-text {
   margin-bottom: 25px;
-  line-height: 22px;
-  font-family: 'Roboto', sans-serif;
-  color: #1F3634; // djup turkos
-  font-weight: 400; //regular
-  // font-size: 16;
+  @include paragraph;
+  color: $deepTurquoise;
 }
 
 .news-tagline {
   margin: 10px 0;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 500; //medium
-  // font-size: 16;
+  @include tagline;
 }
 
 .single-news-tagline {
   margin: 10px 0;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 500; //medium
-  color: #1F3634; // djup turkos
-  // font-size: 16;
+  @include tagline;
+  color: $deepTurquoise;
 }
 
 .news-date {
-  font-family: 'DM Serif Display', serif;
-  font-size: 16px;
   margin: 20px 0 10px 0;
+  font-family: $H2 !important;
+  @include H2;
 }
 
 .single-news-date {
-  font-family: 'DM Serif Display', serif;
-  font-size: 16px;
   margin: 0;
+  font-family: $H2 !important;
+  @include H2;
 }
 
 .news-title {
   margin: 10px 0;
-  font-family: 'DM Serif Display', serif;
+  @include H1;
   white-space: nowrap;
 }
 
 .single-news-title {
-  color: #1F3634; // djup turkos
-  font-family: 'DM Serif Display', serif;
-  font-size: 24px;
+  @include H1;
+  color: $deepTurquoise;
   white-space: nowrap;
   padding-bottom: 15px;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid $black;
 }
 
 .news-category {
-  color: #6B8280; // linblå
+  color: $lineBlue;
   margin: 0;
 }
 
@@ -95,26 +83,24 @@
 }
 
 .news-title-date {
-  display: flex;
-  justify-content: space-between;
-  border-bottom: 2px solid #FFA450;
+  @include flexJustifyBetween;
+  border-bottom: 2px solid $mandarinAccent;
 }
 
 a {
-  color: #333333;
+  color: $grey;
   text-decoration: none;
 }
 
-a:hover
+a:hover // Desktop only
 {
-  color: #1F3634;
+  color: $deepTurquoise;
   text-decoration: none;
   cursor: pointer;
 }
 
 .back-to-articles {
-  display: flex;
-  justify-content: center;
+  @include flexJustifyBetween;
 }
 
 

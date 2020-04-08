@@ -1,8 +1,6 @@
 .eventPage {
-  display: flex;
+  @include flexCenterCenter;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   h2 {
     color: green;
   }
@@ -10,9 +8,7 @@
     margin: 20px 40px;
   }
   .eventContainer {
-    display: flex;
+    @include flexCenterCenter;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
   }
 }

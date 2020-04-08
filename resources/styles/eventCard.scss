@@ -1,9 +1,7 @@
 .eventCard {
   height: 340px;
   margin: 0 15px;
-  background-color: white;
-  display: flex;
+  background-color: $white;
+  @include flexCenterCenter;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }

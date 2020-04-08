@@ -1,13 +1,12 @@
 .mediaSelect {
-  display: flex;
-  justify-content: space-around;
-  color: black;
+  @include flexJustifyAround;
+  color: $black;
   z-index: 2;
 }
 
 .pictures.active,
 .videos.active {
-  color: #1F3634;
+  color: $deepTurquoise;
 }
 
 .display-none {
@@ -16,27 +15,24 @@
 
 .pictures {
   margin-left: 100px;
-  color: #C4C4C4;
-  font-family: 'DM Serif Display', serif;
-  font-size: 16px;
+  color: $unselectedDeepTurquoise;
+  @include H2;
 }
 
 .videos {
   margin-right: 100px;
-  color: #C4C4C4;
-  font-family: 'DM Serif Display', serif;
-  font-size: 16px;
+  color: $unselectedDeepTurquoise;
+  @include H2;
 }
 
 .divider {
-  color: #1F3634;
-  font-size: 16px;
+  color: $deepTurquoise;
+  @include H2;
 }
 
 .seeMoreStyling {
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px;
-  color: black;
+  @include paragraph;
+  color: $black;
 }
 
 .sbi_load_btn,
