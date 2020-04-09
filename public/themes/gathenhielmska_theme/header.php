@@ -26,6 +26,8 @@
                 <h4 class="english">ENG</h4>
             </div> -->
             <div class="menu">
+                    <div class="floral-left"></div>
+                    <div class="floral-right"></div>
                 <ul>
                     <?php foreach (wp_get_nav_menu_items('navigation') as $page) : ?>
                         <li class="nav-item <?php if (is_home() && $page->object_id == get_option('page_for_posts') || is_page($page->object_id)) {

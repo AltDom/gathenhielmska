@@ -1,0 +1,65 @@
+footer {
+  background-color: $deepTurquoise;
+
+  .footer-container {
+    position: relative;
+    width: 92%;
+    height: 100vh;
+    margin: 0 4%;
+    text-align: center;
+
+    .h1 {
+      margin: 0;
+      padding-top: 30px;
+      @include H1;
+      color: $white;
+    }
+
+    .paragraph {
+      margin: 0;
+      padding: 3px 0;
+      @include paragraph;
+      color: $white;
+    }
+
+    .tagline {
+      @include tagline;
+      color: $whitewashWhite;
+      opacity: 0.5;
+    }
+
+    .social-media-icons {
+      @include flexJustifyAround;
+    }
+
+    .footer-line-break {
+      color: white;
+      height: 1px;
+    }
+
+    .floral-left {
+      display: none;
+      position: absolute;
+      top: 5vh;
+      left: -5vw;
+      width: 60%;
+      height: 60%;
+      -webkit-background-size: contain;
+      -moz-background-size: contain;
+      -o-background-size: contain;
+      background-size: contain;
+      background: url(./../images/floral-background-left.png) 60% 60% no-repeat;
+    }
+
+    .floral-right {
+      display: none;
+      position: absolute;
+      top: 5vh;
+      right: -5vw;
+      width: 60%;
+      height: 60%;
+      background: url(./../images/floral-background-right.png) 60% 60% no-repeat;
+    }
+
+  }
+}
