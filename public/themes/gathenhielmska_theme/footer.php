@@ -1,16 +1,16 @@
     <?php wp_footer(); ?>
     <footer>
         <div class="footer-container">
-            <span class="floral-left"></span>
-            <span class="floral-right"></span>
+            <div class="floral-left"></div>
+            <div class="floral-right"></div>
 
             <h1 class="h1">NYHETSBREV</h1>
             <p class="paragraph">Fyll i din epostadress för att få vårt nyhetsbrev</p>
 
-            <form>
-                <input type="text" placeholder="Fyll i din epostadress här...">
-                <button>REGISTRERA</button>
-            </form>
+            <div>
+                <input class="mailing-list-input" type="text" placeholder="Fyll i din epostadress här...">
+                <button class="mailing-list-button">REGISTRERA</button>
+            </div>
 
             <h1 class="h1">KONTAKTA OSS</h1>
             <p class="paragraph">gathenhielmska@info.se</p>
@@ -34,8 +34,9 @@
             <hr class = "footer-line-break">
 
             <div class="company-logos">
-
-
+                <div class="higab-logo"></div>
+                <div class="studie-framjandet-logo"></div>
+                <div class="goteborg-stad-logo"></div>
             </div>
 
 
