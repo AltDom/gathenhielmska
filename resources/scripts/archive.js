@@ -63,7 +63,7 @@ const mediaSelection = () => {
         youtubeItems.forEach(youtubeItem => {
           youtubeItem.style.width = '90%';
           youtubeItem.style.margin = '15px 20px 15px 20px';
-          youtubeItem.style.border = '2px solid $black';
+          // youtubeItem.style.border = '2px solid $black';
           // youtubeItem.style.zIndex = '0';
         });
       }, 200);
@@ -72,7 +72,7 @@ const mediaSelection = () => {
     youtubeItems.forEach(youtubeItem => {
       youtubeItem.style.width = '90%';
       youtubeItem.style.margin = '15px 20px 15px 20px';
-      youtubeItem.style.border = '2px solid $black';
+      // youtubeItem.style.border = '2px solid $black';
       // youtubeItem.style.zIndex = '0';
     });
     const youtubeVideos = document.querySelector(".sb_youtube");
