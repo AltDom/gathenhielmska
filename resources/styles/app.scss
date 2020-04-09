@@ -25,9 +25,17 @@ html {
   display: none;
 }
 
+h1 {
+  @include H1;
+}
 
+h2 {
+  @include H2;
+}
 
-
+p {
+  @include paragraph;
+}
 
 // temporary css under here!
 

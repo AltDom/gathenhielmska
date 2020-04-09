@@ -14,7 +14,7 @@ $the_query = new WP_Query([
     <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
         <img class="hero-news-img" src="<?php echo customFieldExcerpt(get_field("image"), 1, ""); ?>" alt="">
         <a href="<?php the_permalink(); ?>">
-                <h2 class="news-title"><?php the_title(); ?></h2>
+            <h2 class="news-title"><?php the_title(); ?></h2>
         </a>
         <p><?php echo get_field("tagline"); ?></p>
 
@@ -30,8 +30,7 @@ $the_query = new WP_Query([
 <?php while (have_posts()) : the_post(); ?>
 
     <!-- temporary hero-image classname -->
-    <h2><?php the_field('hero_text'); ?></h2>
-    <img class="hero-image" src="<?php the_field('hero_image'); ?>" />
+
 
 <?php endwhile; ?>
 
