@@ -1,14 +1,15 @@
 .eventPage {
   @include flexCenterCenter;
   flex-direction: column;
-  h2 {
-    color: green;
-  }
+  padding: 0 16px;
   .eventCard {
-    margin: 20px 40px;
+    width: 100%;
+    margin-top: 24px;
   }
-  .eventContainer {
-    @include flexCenterCenter;
-    flex-direction: column;
-  }
+}
+
+.eventContainer {
+  width: 100%;
+  @include flexCenterCenter;
+  flex-direction: column;
 }

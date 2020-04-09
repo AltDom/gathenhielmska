@@ -6,9 +6,32 @@ const createEventCard = event => {
 
   const eventCard = document.createElement("div");
   eventCard.classList.add("eventCard");
-  eventCard.innerHTML = `<h2>${values.title}</h2>
-  <p>${values.month}</p>
-  <a href=${values.eventLink}>Läs mer</a>`;
+  eventCard.innerHTML = `<div class="eventCard__imageContainer">
+  <img class="eventCard__imageContainer__image" src="${values.image}">
+  <div class="eventCard__imageContainer__dateContainer">
+      <p>${values.weekDay}</p>
+      <h1 class="dateContainer__dayOfMonth">${values.day}</h1>
+      <p>${values.month}</p>
+      <h1 class="dateContainer__time">${values.time}</h1>
+  </div>
+</div>
+<div class="eventCard__textContainer">
+  <h2>${values.title}</h2>
+  <p>${values.performer}</p>
+</div>
+<div class="eventCard__links">
+  <div>
+      <a href="${values.eventLink}">
+          <h2>LÄS MER</h2>
+      </a>
+  </div>
+  <div>
+      <a href="${values.ticketLink}">
+          <h2>KÖP VIA BILETTO</h2>
+      </a>
+  </div>
+</div>`;
+
   return eventCard;
 };
 

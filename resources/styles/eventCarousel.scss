@@ -13,6 +13,9 @@
 .eventCarousel__item {
   flex: 0 0 auto;
   height: 100%;
-  width: 240px;
   @include flexCenterCenter;
+  .eventCard {
+    width: 276px;
+    margin: 0 20px;
+  }
 }

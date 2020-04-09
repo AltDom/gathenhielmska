@@ -1,7 +1,87 @@
 .eventCard {
-  height: 340px;
-  margin: 0 15px;
   background-color: $white;
   @include flexCenterCenter;
   flex-direction: column;
 }
+
+.eventCard__imageContainer {
+  position: relative;
+}
+
+.eventCard__imageContainer__image {
+  height: 255px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.eventCard__imageContainer__dateContainer {
+  position: absolute;
+  height: 134px;
+  width: 95px;
+  top: 10px;
+  left: 8px;
+  background-color: rgba(250, 249, 246, 0.9);
+  @include flexCenterCenter;
+  flex-direction: column;
+
+  * {
+    margin: 0;
+  }
+
+  p {
+    color: $lineBlue;
+  }
+
+  .dateContainer__dayOfMonth {
+    font-size: 32px;
+    color: $deepTurquoise
+  }
+
+  .dateContainer__time {
+    color: $mandarinAccent;
+  }
+}
+
+.eventCard__textContainer {
+  padding: 0 6px;
+  color: $deepTurquoise;
+  width: 100%;
+
+  h2 {
+    text-transform: uppercase;
+    margin-top: 18px;
+  }
+  p {
+    margin-bottom: 19px;
+  }
+}
+
+.eventCard__links {
+  height: 88px;
+  width: 100%;
+  border: 1px solid $deepTurquoise;
+
+  div {
+    height: 50%;
+    @include flexCenterCenter;
+
+    h2 {
+      margin: 0;
+    }
+  }
+
+  div:first-child {
+    h2 {
+      color: $deepTurquoise;
+    }
+
+  }
+
+  div:last-child {
+    background-color: $deepTurquoise;
+    h2 {
+      color: $whitewashAccent;
+    }
+  }
+}
+

@@ -1,30 +1,53 @@
 .searchForm {
-  width: 90vw;
+  position: relative;
+  width: 100%;
+  margin-top: 16px;
   @include flexCenterCenter;
   flex-direction: column;
-  margin-top: 40px;
+
   .searchForm__searchBar {
-    height: 2em;
+    height: 39px;
     width: 100%;
-    margin-bottom: 10px;
-    border: 1px solid $black;
+    margin-bottom: 6px;
+    border: 1px solid $lineBlue;
   }
+
   .searchForm__options {
+    height: 46px;
     width: 100%;
     @include flexRow;
+    border: 1px solid $lineBlue;
     background-color: $white;
     div {
-      border: 1px solid $black;
       width: 50%;
       @include flexCenterCenter;
     }
+    :last-child {
+      background-color: $lineBlue;
+      color: $white;
+    }
   }
-  .searchForm__categoryList, .searchForm__orderList {
+
+  .searchForm__listWrapper {
+    position: relative;
     width: 100%;
+  }
+
+  .searchForm__categoryList, .searchForm__orderList {
+    position: absolute;
+    width: 100%;
+
     .searchForm__categoryList__item, .searchForm__orderList__item{
       border: 1px solid $black;
       width: 100%;
       @include flexRowJustifyBetweenAlignCenter;
     }
+  }
+
+  .submitBtn {
+    position: absolute;
+    top: 4px;
+    right: 6px;
+    padding: 0;
   }
 }
