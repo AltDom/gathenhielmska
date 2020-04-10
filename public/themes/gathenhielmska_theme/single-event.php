@@ -16,7 +16,8 @@ $categoryNames = trim($categoryNames, ', ');
 <input class="categoryNames" type="hidden" name="categoryNames" value="<?php echo $categoryNames; ?>">
 
 <div class="singleEvent"></div>
-<div class="eventCarousel"></div>
+<h1 class="singleEvent__carouselTitle">LIKNANDE EVENEMANG</h1>
+<div class="eventCarousel singleEventCarousel"></div>
 
 
 <?php get_footer();

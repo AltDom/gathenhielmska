@@ -74,41 +74,14 @@ endwhile;
         </button>
     </form>
 
-    <div class="eventContainer">
-
-        <!-- <div class="eventCard">
-            <div class="eventCard__imageContainer">
-                <img class="eventCard__imageContainer__image" src="https://lh3.googleusercontent.com/proxy/eqhWOu9BfARoBbg4ieuC0SdHa1tvItirfExwbnl1ETuOn3r-bkmHGQd-mJ3w93fIzepPeQdHQ2Apkfl9BrpeE_mw5Eo8LhQIf0FZjkwUDDi4sGZTD1LqqAiS1_Z4b5JWuw">
-                <div class="eventCard__imageContainer__dateContainer">
-                    <p>LÖR</p>
-                    <h1 class="dateContainer__dayOfMonth">22</h1>
-                    <p>september</p>
-                    <h1 class="dateContainer__time">16:00</h1>
-                </div>
-            </div>
-            <div class="eventCard__textContainer">
-                <h2>den här evenemangstiteln är anpassad för långa evenemang - titta bara</h2>
-                <p>Artist Artistsson</p>
-            </div>
-            <div class="eventCard__links">
-                <div>
-                    <a href="#">
-                        <h2>LÄS MER</h2>
-                    </a>
-                </div>
-                <div>
-                    <a href="#">
-                        <h2>KÖP VIA BILETTO</h2>
-                    </a>
-                </div>
-
-            </div>
-        </div> -->
-
-    </div>
+    <div class="eventContainer"></div>
 
     <p class="noMoreMessage hidden">No more events</p>
-    <button class="loadMoreBtn hidden">Load More</button>
+    <button class="loadMoreBtn hidden">
+        <p>Se fler</p><svg width="22" height="12" viewBox="0 0 22 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1L11 11L21 1" stroke="black" />
+        </svg>
+    </button>
 
 </section>
 

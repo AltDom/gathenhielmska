@@ -30,12 +30,14 @@
 
   .searchForm__listWrapper {
     position: relative;
+    z-index: 100;
     width: 100%;
   }
 
   .searchForm__categoryList, .searchForm__orderList {
     position: absolute;
     width: 100%;
+    background-color: $lineBlue;
 
     .searchForm__categoryList__item, .searchForm__orderList__item{
       border: 1px solid $black;

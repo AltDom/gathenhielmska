@@ -13,9 +13,15 @@
 .eventCarousel__item {
   flex: 0 0 auto;
   height: 100%;
+  padding: 0 8px;
   @include flexCenterCenter;
+
   .eventCard {
     width: 276px;
-    margin: 0 20px;
+    margin: 0;
+  }
+
+  .eventCard__imageContainer__image {
+    height: 165px;
   }
 }

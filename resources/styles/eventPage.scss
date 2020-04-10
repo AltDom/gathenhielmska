@@ -13,3 +13,13 @@
   @include flexCenterCenter;
   flex-direction: column;
 }
+
+.loadMoreBtn {
+  margin-top: 24px;
+  margin-bottom: 32px;
+  @include flexCenterCenter;
+  :first-child {
+    margin: 0;
+    margin-right: 8px;
+  }
+}
