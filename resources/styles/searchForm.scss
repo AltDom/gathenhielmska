@@ -38,11 +38,54 @@
     position: absolute;
     width: 100%;
     background-color: $lineBlue;
+    border-top: 1px solid $black;
 
     .searchForm__categoryList__item, .searchForm__orderList__item{
-      border: 1px solid $black;
+      border: solid $black;
+      border-width: 0 1px 1px 1px;
+      height: 45px;
       width: 100%;
+      padding-left: 16px;
+      padding-right: 29px;
       @include flexRowJustifyBetweenAlignCenter;
+    }
+
+    .searchForm__categoryList__item {
+      background-color: $deepTurquoise;
+
+      p {
+        color: #F3F0E8;
+      }
+    }
+
+    .searchForm__categoryList__item.searchForm__categoryList__okBtn {
+      background-color: #7C8883;
+      border: none;
+      height: 48px;
+      @include flexCenterCenter;
+
+      p {
+        color: $white;
+      }
+    }
+
+    .searchForm__orderList__item.searchForm__orderList__okBtn {
+      background-color: $deepTurquoise;
+      border: none;
+      height: 48px;
+      @include flexCenterCenter;
+
+      p {
+        color: $white;
+      }
+    }
+
+    .searchForm__orderList__item {
+      background-color: $lineBlue;
+
+      p {
+        color: #F3F0E8;
+      }
     }
   }
 
@@ -53,3 +96,5 @@
     padding: 0;
   }
 }
+
+

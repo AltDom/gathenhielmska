@@ -17,12 +17,14 @@ while ($loop->have_posts()) : $loop->the_post();
         if (!$duplicate) {
             $categories[] = [
                 'slug' => $term_single->slug,
+                'name' => $term_single->name,
                 'id' => $term_single->term_id
             ];
         }
     }
 endwhile;
 ?>
+
 
 <section class="eventPage">
 
@@ -38,7 +40,9 @@ endwhile;
 
                     <div class="searchForm__categoryList__item">
                         <div>
-                            <label for="<?php echo $category['slug'] ?>"><?php echo $category['slug'] ?></label>
+                            <label for="<?php echo $category['slug'] ?>">
+                                <p><?php echo $category['name'] ?></p>
+                            </label>
                         </div>
                         <div>
                             <input type="checkbox" id="<?php echo $category['slug'] ?>" name="category" value="<?php echo $category['id'] ?>">
@@ -46,12 +50,17 @@ endwhile;
                     </div>
 
                 <?php endforeach; ?>
+                <div class="searchForm__categoryList__item searchForm__categoryList__okBtn">
+                    <p>OK</p>
+                </div>
             </div>
 
             <div class="searchForm__orderList hidden">
                 <div class="searchForm__orderList__item">
                     <div>
-                        <label for="new">Pågående</label>
+                        <label for="new">
+                            <p>Pågående</p>
+                        </label>
                     </div>
                     <div>
                         <input type="radio" name="order" value="new" checked>
@@ -59,11 +68,16 @@ endwhile;
                 </div>
                 <div class="searchForm__orderList__item">
                     <div>
-                        <label for="old">Avslutade</label>
+                        <label for="old">
+                            <p>Avslutade</p>
+                        </label>
                     </div>
                     <div>
                         <input type="radio" name="order" value="old">
                     </div>
+                </div>
+                <div class="searchForm__orderList__item searchForm__orderList__okBtn">
+                    <p>OK</p>
                 </div>
             </div>
         </div>

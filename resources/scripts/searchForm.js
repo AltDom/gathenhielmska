@@ -14,6 +14,10 @@ const searchForm = () => {
     const loadMoreBtn = document.querySelector(".loadMoreBtn");
     const noMoreMessage = document.querySelector(".noMoreMessage");
     const eventContainer = document.querySelector(".eventContainer");
+    const orderOkBtn = document.querySelector(".searchForm__orderList__okBtn");
+    const categoryOkBtn = document.querySelector(
+      ".searchForm__categoryList__okBtn"
+    );
 
     categoryBtn.addEventListener("click", () => {
       categoryList.classList.toggle("hidden");
@@ -23,6 +27,14 @@ const searchForm = () => {
     orderBtn.addEventListener("click", () => {
       orderList.classList.toggle("hidden");
       categoryList.classList.add("hidden");
+    });
+
+    categoryOkBtn.addEventListener("click", () => {
+      categoryList.classList.add("hidden");
+    });
+
+    orderOkBtn.addEventListener("click", () => {
+      orderList.classList.add("hidden");
     });
 
     //getting json data
@@ -101,6 +113,9 @@ const searchForm = () => {
 
     searchForm.addEventListener("submit", e => {
       e.preventDefault();
+      orderList.classList.add("hidden");
+      categoryList.classList.add("hidden");
+
       uri = createUri(searchForm);
       page = 2;
       eventContainer.innerHTML = "";
@@ -115,7 +130,6 @@ const searchForm = () => {
     loadMoreBtn.addEventListener("click", () => {
       const nextPage = uri + `&page=${page}`;
       page++;
-      console.log(nextPage);
 
       fetch(nextPage)
         .then(res => res.json())
