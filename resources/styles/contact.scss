@@ -1,0 +1,74 @@
+.staff-member-box {
+  color: $deepTurquoise;
+  text-align: center;
+}
+
+.staff-img {
+  width: 178px;
+  height: 178px;
+}
+
+.affiliate-member-box {
+  display: flex;
+  padding: 5px 0 15px 0;
+}
+
+.affiliate-img {
+  width: 100px;
+  height: 100px;
+}
+
+.affiliate-text-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: $deepTurquoise;
+  margin-left: 20px;
+  // text-align: center;
+}
+
+.affiliate-text-box h2 {
+  margin-top: 2px;
+}
+
+.affiliate-text-box p {
+  margin: 10px 0 2px 0;
+}
+
+.affiliate-email {
+  text-decoration: underline;
+}
+
+.find-us-box {
+  display: relative;
+}
+
+.gathenhielmska-map {
+  position: absolute;
+  top: 200px;
+  left: 4px;
+  width: 100%;
+  height: 100%;
+  background: url(./../images/map.png) 60% 60% no-repeat;
+  z-index: 100;
+}
+
+.address {
+  display: flex;
+  align-items: center;
+}
+
+.address-text p {
+  margin: 4px 0;
+}
+
+.address svg {
+  padding: 0 4px 4px 0;
+}
+
+.directions {
+  display: inline;
+  white-space: nowrap;
+}
+
+
