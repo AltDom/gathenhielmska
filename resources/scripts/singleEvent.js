@@ -12,10 +12,30 @@ const singleEvent = () => {
       .then(res => {
         const categoryNames = document.querySelector(".categoryNames").value;
         const values = formatEventValues(res);
+        console.log(values);
 
-        singleEvent.innerHTML = `<h2>${values.title}</h2>
-        <p>${categoryNames}</p>
-        <p>${values.month}</p>`;
+        singleEvent.innerHTML = `<img class="singleEvent__image" src="${values.image}" alt="event image">
+        <div class="singleEvent__textWrapper">
+            <div class="singleEvent__textWrapper__performerContainer">
+                <p>${values.performer}</p>
+                <p>${categoryNames}</p>
+            </div>
+            <h1>${values.title}</h1>
+            <hr>
+            <div class="singleEvent__textWrapper__dateTimeContainer">
+                <div>
+                    <p>${values.weekDay}</p>
+                    <h1>${values.fullDate}</h1>
+                </div>
+                <div>
+                    <p>TID</p>
+                    <h1>${values.time}</h1>
+                </div>
+            </div>
+            <div class="singleEvent__textWrapper__ticketLink">
+                <a href="${values.ticketLink}"><h1>KÖP VIA BILETTO</h1></a>
+            </div>
+            <p>${values.description}</p>`;
       });
   }
 };

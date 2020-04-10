@@ -10,7 +10,7 @@ const createEventCard = event => {
   <img class="eventCard__imageContainer__image" src="${values.image}">
   <div class="eventCard__imageContainer__dateContainer">
       <p>${values.weekDay}</p>
-      <h1 class="dateContainer__dayOfMonth">${values.day}</h1>
+      <h1 class="dateContainer__dayOfMonth">${values.dayOfMonth}</h1>
       <p>${values.month}</p>
       <h1 class="dateContainer__time">${values.time}</h1>
   </div>

@@ -1,0 +1,75 @@
+.singleEvent__image {
+  width: 100%;
+  height: 256px;
+  object-fit: cover;
+}
+
+.singleEvent__textWrapper {
+  padding: 0 16px;
+
+  * {
+    margin: 0;
+  }
+
+  h1 {
+    color: $deepTurquoise;
+    text-transform: uppercase;
+  }
+
+  hr {
+    border-width: 0.5px;
+    border-color: $black;
+  }
+
+  p {
+    color: $lineBlue;
+    margin: 0;
+  }
+}
+
+.singleEvent__textWrapper__performerContainer {
+  @include flexJustifyBetween;
+  margin-top: 12px;
+
+  p {
+    color: $lineBlue;
+    text-transform: uppercase;
+  }
+}
+
+.singleEvent__textWrapper__dateTimeContainer {
+  @include flexCenterCenter;
+  justify-content: flex-start;
+  margin-top: 12px;
+  margin-bottom: 8px;
+
+  p {
+    color: $lineBlue;
+  }
+
+  :first-child {
+    margin-right: 90px;
+  }
+}
+
+.singleEvent__textWrapper__ticketLink {
+  height: 49px;
+  width: 100%;
+  background-color: $deepTurquoise;
+  @include flexCenterCenter;
+  margin-bottom: 28px;
+
+  h1 {
+    color: $whitewashAccent;
+  }
+}
+
+.singleEvent__carouselTitle {
+  text-align: center;
+  margin-bottom: 24px;
+  color: $deepTurquoise;
+}
+
+.singleEventCarousel {
+  margin-bottom: 32px;
+}
