@@ -1,5 +1,6 @@
 ("use_strict");
 import createEventCard from "./functions/createEventCard";
+import createNewsBox from "./functions/createNewsBox";
 
 const searchForm = () => {
   const searchForm = document.querySelector(".searchForm");
@@ -14,6 +15,7 @@ const searchForm = () => {
     const loadMoreBtn = document.querySelector(".loadMoreBtn");
     const noMoreMessage = document.querySelector(".noMoreMessage");
     const eventContainer = document.querySelector(".eventContainer");
+    const newsContainer = document.querySelector(".news-container");
     const orderOkBtn = document.querySelector(".searchForm__orderList__okBtn");
     const categoryOkBtn = document.querySelector(
       ".searchForm__categoryList__okBtn"
@@ -107,7 +109,10 @@ const searchForm = () => {
       }
 
       if (postType === "posts") {
-        //append posts
+        res.forEach(post => {
+          const newsBox = createNewsBox(post);
+          newsContainer.appendChild(newsBox);
+        });
       }
     };
 
@@ -118,7 +123,12 @@ const searchForm = () => {
 
       uri = createUri(searchForm);
       page = 2;
-      eventContainer.innerHTML = "";
+      if (eventContainer) {
+        eventContainer.innerHTML = "";
+      }
+      if (newsContainer) {
+        newsContainer.innerHTML = "";
+      }
       loadMoreBtn.classList.remove("hidden");
       noMoreMessage.classList.add("hidden");
 

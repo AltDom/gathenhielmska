@@ -63,25 +63,25 @@ const formatEventValues = event => {
 
   switch (date.getDay()) {
     case 0:
-      weekDay = "MÅN";
+      weekDay = "SÖN";
       break;
     case 1:
-      weekDay = "TIS";
+      weekDay = "MÅN";
       break;
     case 2:
-      weekDay = "ONS";
+      weekDay = "TIS";
       break;
     case 3:
-      weekDay = "TOR";
+      weekDay = "ONS";
       break;
     case 4:
-      weekDay = "FRE";
+      weekDay = "TOR";
       break;
     case 5:
-      weekDay = "LÖR";
+      weekDay = "FRE";
       break;
     case 6:
-      weekDay = "SÖN";
+      weekDay = "LÖR";
       break;
     default:
       weekDay = "DAG";
