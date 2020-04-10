@@ -12,7 +12,6 @@ const singleEvent = () => {
       .then(res => {
         const categoryNames = document.querySelector(".categoryNames").value;
         const values = formatEventValues(res);
-        console.log(values);
 
         singleEvent.innerHTML = `<img class="singleEvent__image" src="${values.image}" alt="event image">
         <div class="singleEvent__textWrapper">
