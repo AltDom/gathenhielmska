@@ -13,6 +13,7 @@
 @import "news.scss";
 @import "searchForm.scss";
 @import "archive.scss";
+@import "contact.scss";
 @import "footer.scss";
 
 html {
@@ -27,14 +28,24 @@ html {
 
 h1 {
   @include H1;
+  white-space: nowrap;
 }
 
 h2 {
   @include H2;
 }
 
+h3 {
+  @include tagline;
+}
+
 p {
   @include paragraph;
+}
+
+.h1-center {
+  @include H1;
+  text-align: center;
 }
 
 // temporary css under here!
