@@ -17,6 +17,7 @@
 @import "history.scss";
 @import "footer.scss";
 @import "singleEvent.scss";
+@import "homePage.scss";
 
 html {
   margin: 0px;
@@ -30,12 +31,12 @@ html {
 
 h1 {
   @include H1;
-  white-space: nowrap;
   font-weight: 400;
 }
 
 h2 {
   @include H2;
+  font-weight: normal;
 }
 
 h3 {
