@@ -34,6 +34,13 @@ const header = () => {
   //     });
   //   }
   // };
+  if (document.querySelector(".page-template-home")) {
+    const nav = document.querySelector("nav");
+    nav.childNodes[2].textContent = "GATHENHIELMSKA";
+  } else if (document.querySelector(".single-event")) {
+    const nav = document.querySelector("nav");
+    nav.childNodes[2].textContent = "EVENT";
+  }
 
   const navSlide = () => {
     const header = document.querySelector("header");
