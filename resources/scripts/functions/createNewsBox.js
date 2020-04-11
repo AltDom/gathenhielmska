@@ -22,7 +22,7 @@ const createNewsBox = post => {
       </a>
       <p class="news-date">${fullDate}</p>
   </div>
-  <p class="news-tagline">${post.acf.tagline}</p>
+  <p class="news-tagline"><b>${post.acf.tagline}</b></p>
   <p class="news-text">${post.acf.description}</p>
 </div>`;
 

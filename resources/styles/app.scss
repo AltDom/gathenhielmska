@@ -16,6 +16,7 @@
 @import "contact.scss";
 @import "footer.scss";
 @import "singleEvent.scss";
+@import "homePage.scss";
 
 html {
   margin: 0px;
@@ -29,7 +30,7 @@ html {
 
 h1 {
   @include H1;
-  white-space: nowrap;
+  // white-space: nowrap;
 }
 
 h2 {
