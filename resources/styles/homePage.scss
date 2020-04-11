@@ -12,11 +12,16 @@
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   grid-gap: 1px;
-  * {
-    background-color: $deepTurquoise;
+  div {
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
   }
   :first-child {
     grid-column-start: 1;
     grid-column-end: 3;
   }
+
 }

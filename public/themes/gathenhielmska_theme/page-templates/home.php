@@ -32,14 +32,16 @@
         <div class="homePage__newsContainer">
             <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
 
-                <div>
-                    <h1>
-                        hej
-                    </h1>
-                    <?php if ($isFirstItem) : ?>
-                        <p>extra text</p>
-                    <?php endif; ?>
-                </div>
+                <?php if ($isFirstItem) : ?>
+                    <div>
+                        <img src="<?php the_field("image"); ?>" alt="">
+
+                    </div>
+                <?php else : ?>
+                    <div class="homePage__newsContainer__lastTwoItems">
+                        <img src="<?php the_field("image"); ?>" alt="">
+                    </div>
+                <?php endif; ?>
 
                 <?php $isFirstItem = false; ?>
             <?php endwhile; ?>
