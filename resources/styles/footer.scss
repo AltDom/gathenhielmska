@@ -54,7 +54,7 @@ footer {
       @include tagline;
       color: $whitewashWhite;
       opacity: 0.5;
-      margin-top: 220px;
+      margin-top: 25px;
     }
 
     .social-media-icons {
@@ -74,61 +74,12 @@ footer {
       height: 1px;
     }
 
-    .higab-logo {
-      position: absolute;
-      top: 60vh;
-      left: 32vw;
-      width: 40%;
-      height: 20%;
-      background: url(./../images/higab.png) 60% 60% no-repeat;
-      z-index: 100;
+    .company-logos {
+      @include flexColumnAlignCenter;
     }
 
-    .studie-framjandet-logo {
-      position: absolute;
-      top: 69vh;
-      left: 32vw;
-      width: 30%;
-      height: 20%;
-      background: url(./../images/studie-framjandet.png) 60% 60% no-repeat;
-      z-index: 100;
+    .company-logos img {
+      margin-top: 20px;
     }
-
-    .goteborg-stad-logo {
-      position: absolute;
-      top: 78vh;
-      left: 32vw;
-      width: 30%;
-      height: 20%;
-      background: url(./../images/goteborg-stad.png) 60% 60% no-repeat;
-      z-index: 100;
-    }
-
-    // .floral-left {
-    //   // display: none;
-    //   position: absolute;
-    //   top: 5vh;
-    //   left: 0vw;
-    //   width: 60%;
-    //   height: 60%;
-    //   -webkit-background-size: contain;
-    //   -moz-background-size: contain;
-    //   -o-background-size: contain;
-    //   background-size: contain;
-    //   background: url(./../images/floral-background-left.png) 60% 60% no-repeat;
-    //   z-index: 0;
-    // }
-
-    // .floral-right {
-    //   // display: none;
-    //   position: absolute;
-    //   top: 5vh;
-    //   right: 0vw;
-    //   width: 60%;
-    //   height: 60%;
-    //   background: url(./../images/floral-background-right.png) 60% 60% no-repeat;
-    //   z-index: 0;
-    // }
-
   }
 }

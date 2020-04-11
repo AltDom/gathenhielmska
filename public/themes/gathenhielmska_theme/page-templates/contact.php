@@ -33,7 +33,7 @@
         <?php endif; ?>
     </div>
 
-    <div class = "affiliates-box"></div>
+    <div class = "affiliates-box">
         <h1 class="h1-center">ÖVRIGA VERKSAMHETER I HUSET</h1>
 
         <?php
@@ -66,7 +66,7 @@
         <?php endif; ?>
     </div>
 
-    <div class = "hitta-hit-box">
+    <div class = "find-us-box">
         <h1 class="h1-center">HITTA HIT</h1>
 
         <div class = "address">
@@ -80,8 +80,7 @@
             <p>Stigbergetstorget 7</p>
             <p>414 63 Göteborg</p>
         </div>
-        <!-- <div class = "gathenhielmska-map"></div>
-        <img src="/resources/images/map.png" alt=""> -->
+        <img src="<?php bloginfo('template_directory') ?>/assets/images/map.png" alt="gathenhielmska-map">
         <p class = "directions"><h3 class = "directions">Vägbeskrivning: </h3>Närmaste hållplats är blablabla och intill denfinns bla bla. Sen borde du se dadada. Sen är du där cacaca</p>
     </div>
 

@@ -34,17 +34,10 @@
             <hr class = "footer-line-break">
 
             <div class="company-logos">
-                <div class="higab-logo"></div>
-                <div class="studie-framjandet-logo"></div>
-                <div class="goteborg-stad-logo"></div>
+                <img src="<?php bloginfo('template_directory') ?>/assets/images/higab.png" alt="higab-logo">
+                <img src="<?php bloginfo('template_directory') ?>/assets/images/studie-framjandet.png" alt="studie-framjandet-logo">
+                <img src="<?php bloginfo('template_directory') ?>/assets/images/goteborg-stad.png" alt="goteborg-stad-logo">
             </div>
-
-
-
-
-
-
-
             <p class="tagline">Copyright 2020 Gathenhielmska</p>
         </div>
 
