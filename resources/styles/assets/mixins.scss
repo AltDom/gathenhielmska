@@ -36,6 +36,11 @@
   justify-content: space-around;
 }
 
+@mixin flexJustifyCenter {
+  display: flex;
+  justify-content: center;
+}
+
 @mixin flexRow {
   display: flex;
   flex-direction: row;

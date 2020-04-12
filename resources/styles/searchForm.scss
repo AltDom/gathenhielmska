@@ -10,6 +10,11 @@
     width: 100%;
     margin-bottom: 6px;
     border: 1px solid $lineBlue;
+
+    background-color: $whitewashWhite;
+    color: $deepTurquoise;
+    @include paragraph;
+    padding-left: 10px;
   }
 
   .searchForm__options {
@@ -17,14 +22,14 @@
     width: 100%;
     @include flexRow;
     border: 1px solid $lineBlue;
-    background-color: $white;
+    background-color: $whitewashWhite;
     div {
       width: 50%;
       @include flexCenterCenter;
     }
     :last-child {
       background-color: $lineBlue;
-      color: $white;
+      color: $whitewashWhite;
     }
   }
 

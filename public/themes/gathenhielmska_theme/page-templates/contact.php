@@ -5,7 +5,7 @@
 
 <div class="news-container">
     <div class = "staff-box">
-        <h1 class="h1-center">VI ÄR GATENHIEMSKA</h1>
+        <h1 class="h1-center">VI ÄR GATHENHIEMSKA</h1>
         <?php
         $the_query = new WP_Query([
             'posts_per_page' => 3,

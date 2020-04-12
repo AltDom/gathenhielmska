@@ -30,9 +30,11 @@
   @include H2;
 }
 
-.seeMoreStyling {
+.seeMoreStyling,
+.seeMoreStyling a {
   @include paragraph;
-  color: $black;
+  color: $deepTurquoise;
+  @include flexJustifyCenter;
 }
 
 .sbi_load_btn,

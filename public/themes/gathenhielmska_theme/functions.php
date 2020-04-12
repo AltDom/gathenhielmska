@@ -51,6 +51,7 @@ require get_template_directory() . '/post-types/post.php';
 require get_template_directory() . '/post-types/event.php';
 require get_template_directory() . '/post-types/staff.php';
 require get_template_directory() . '/post-types/affiliations.php';
+require get_template_directory() . '/post-types/venues.php';
 require get_template_directory() . '/taxonomies/category.php';
 
 add_theme_support('soil-js-to-footer');

@@ -1,4 +1,7 @@
     <?php wp_footer(); ?>
+    <div class = "news-container">
+        <img class = "floral-divider" src="<?php bloginfo('template_directory') ?>/assets/images/floral-divider.png" alt="floral-divider">
+    </div>
     <footer>
         <div class="footer-container">
             <div class="floral-left"></div>

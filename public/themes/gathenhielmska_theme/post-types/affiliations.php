@@ -8,7 +8,7 @@ add_action('init', function () {
         'labels' => [
             'add_new_item' => __('Add New Affiliation'),
             'edit_item' => __('Edit Affiliation'),
-            'name' => __('Affiliation'),
+            'name' => __('Affiliations'),
             'search_items' => __('Search Affiliation'),
             'singular_name' => __('Affiliation'),
         ],
