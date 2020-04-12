@@ -14,9 +14,13 @@
     <?php endwhile; ?>
 
     <!-- Events -->
-    <h2>kommande evenemang</h2>
+    <h1 class="homePage__h1">PÅ GÅNG</h1>
 
     <div class="eventCarousel"></div>
+
+    <a href="<?php echo get_post_type_archive_link('event'); ?>">
+        <p class="homePage__eventsLink"><u>se alla event</u></p>
+    </a>
 
     <!-- Nyheter -->
 
