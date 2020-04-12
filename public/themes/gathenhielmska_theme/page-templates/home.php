@@ -33,14 +33,28 @@
             <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
 
                 <?php if ($isFirstItem) : ?>
-                    <div>
-                        <img src="<?php the_field("image"); ?>" alt="">
 
+                    <div>
+                        <a href="<?php the_permalink(); ?>">
+                            <img src="<?php the_field("image"); ?>" alt="" loading="lazy">
+                            <div class="homePage__newsContainer__textContainer">
+                                <h2><?php the_title(); ?></h2>
+                                <p><?php the_field('tagline') ?></p>
+                            </div>
+                        </a>
                     </div>
+
                 <?php else : ?>
+
                     <div class="homePage__newsContainer__lastTwoItems">
-                        <img src="<?php the_field("image"); ?>" alt="">
+                        <a href="<?php the_permalink(); ?>">
+                            <img src="<?php the_field("image"); ?>" alt="" loading="lazy">
+                            <div class="homePage__newsContainer__textContainer">
+                                <h2><?php the_title(); ?></h2>
+                            </div>
+                        </a>
                     </div>
+
                 <?php endif; ?>
 
                 <?php $isFirstItem = false; ?>
