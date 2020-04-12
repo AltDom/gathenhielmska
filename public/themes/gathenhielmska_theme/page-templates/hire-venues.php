@@ -1,7 +1,11 @@
 <?php /* Template Name: Hire Venues */ ?>
 <?php get_header(); ?>
 
+
+
 <div class="news-container">
+    <div class = "booking-form"></div>
+
     <p>intresserad av att hyra våra lokaler för ett event eller er nästa konferens. Nedan listar vi våra våra olika alternativ. Välkommen att kontakta oss vid intresse</p>
 
     <div class = "venues-box">
