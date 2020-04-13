@@ -4,6 +4,7 @@
 
 
 <div class="news-container">
+    <div class = "opacity-div"></div>
     <div class = "booking-form">
         <form name="hire-venue-form" method="post" action="">
             <input type="text" placeholder="För- & Efternamn">
@@ -17,12 +18,12 @@
                 </div> -->
                 <!-- <div></div> -->
             <!-- </div> -->
-            <input type="text" placeholder="Kategori">
+            <input type="text" placeholder="Event kategori">
             <div>
                 <input type="text" placeholder="Event bildfil">
                 <div></div>
             </div>
-            <input type="text" placeholder="Om gruppen. förmiddag/eftermiddag">
+            <input class="about-event-input" type="text" placeholder="Om gruppen. Kontakt. Förmiddag/Eftermiddag">
             <button>SKICKA</button>
         </form>
     </div>

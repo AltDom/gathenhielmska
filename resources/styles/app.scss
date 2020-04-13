@@ -26,6 +26,11 @@ html {
   box-sizing: border-box;
 }
 
+body {
+  position: relative;
+  margin-top: 60px;
+}
+
 .hidden {
   display: none;
 }

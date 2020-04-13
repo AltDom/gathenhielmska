@@ -9,6 +9,7 @@ const venuesForm = () => {
       const bookingForm = document.querySelector(".booking-form");
       if (bookingForm.style.display !== "flex") {
         bookingForm.style.display = "flex";
+        bookingForm.style.setProperty('opacity', '1', 'important');
         setTimeout(function (){
           setBookingFormClosingListener();
         }, 1);
@@ -25,18 +26,18 @@ const venuesForm = () => {
 
       const clickedBody = function(event) {
         event.preventDefault();
+        console.log(isClickedOutside)
         const bookingForm = document.querySelector(".booking-form");
         const isClickedOutside = !bookingForm.contains(event.target);
         if (isClickedOutside) {
           bookingForm.style.display = "none";
-          body.style.opacity = 1;
-          body.removeEventListener('click', clickedBody, false);
+          opacityDiv.style.display = "none";
+          opacityDiv.removeEventListener('click', clickedBody, false);
         }
       }
-
-      const body = document.querySelector("body")
-      body.style.opacity = 0.5;
-      body.addEventListener('click', clickedBody, false);
+      const opacityDiv = document.querySelector(".opacity-div");
+      opacityDiv.style.display = "block";
+      opacityDiv.addEventListener('click', clickedBody, false);
     }
 
   }

@@ -4,10 +4,11 @@ header {
 
   nav {
     @include flexJustifyBetween;
-    // position: fixed;
+    position: fixed;
     background-color: $whitewashWhite;
     align-items: center;
     height: 8vh;
+    top: 0;
     @include H2;
     color: $lineBlue;
     z-index: 1000;
