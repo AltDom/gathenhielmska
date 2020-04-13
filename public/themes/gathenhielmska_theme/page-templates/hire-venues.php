@@ -4,7 +4,28 @@
 
 
 <div class="news-container">
-    <div class = "booking-form"></div>
+    <div class = "booking-form">
+        <form name="hire-venue-form" method="post" action="">
+            <input type="text" placeholder="För- & Efternamn">
+            <input type="text" placeholder="Titel på event">
+            <input type="text" placeholder="Antal anordnare">
+            <!-- <div> -->
+                <input type="date" placeholder="Datum">
+                <!-- <div class="calendar">
+                    <div class="calendar-section1"></div>
+                    <div class="calendar-section1"></div>
+                </div> -->
+                <!-- <div></div> -->
+            <!-- </div> -->
+            <input type="text" placeholder="Kategori">
+            <div>
+                <input type="text" placeholder="Event bildfil">
+                <div></div>
+            </div>
+            <input type="text" placeholder="Om gruppen. förmiddag/eftermiddag">
+            <button>SKICKA</button>
+        </form>
+    </div>
 
     <p>intresserad av att hyra våra lokaler för ett event eller er nästa konferens. Nedan listar vi våra våra olika alternativ. Välkommen att kontakta oss vid intresse</p>
 
