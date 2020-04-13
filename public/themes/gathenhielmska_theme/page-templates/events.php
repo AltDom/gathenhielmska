@@ -59,7 +59,7 @@ endwhile;
                 <div class="searchForm__orderList__item">
                     <div>
                         <label for="new">
-                            <p>Senaste inlägg</p>
+                            <p>Pågående</p>
                         </label>
                     </div>
                     <div>
@@ -69,7 +69,7 @@ endwhile;
                 <div class="searchForm__orderList__item">
                     <div>
                         <label for="old">
-                            <p>Äldsta inlägg</p>
+                            <p>Avslutade</p>
                         </label>
                     </div>
                     <div>

@@ -6,11 +6,13 @@
 
     <!-- Hero -->
     <?php while (have_posts()) : the_post(); ?>
-        <?php // the_field('hero_text')
-        ?>
-        <!-- temporary hero-image classname -->
-
-
+        <div class="homePage__heroContainer">
+            <img src="<?php the_field('hero_image') ?>" alt="hero image" class="homePage__heroContainer__heroImage">
+            <div class="homePage__heroContainer__textContainer">
+                <h1><?php the_field('hero_headline'); ?></h1>
+                <p><?php the_field('hero_text'); ?></p>
+            </div>
+        </div>
     <?php endwhile; ?>
 
     <!-- Events -->
@@ -18,7 +20,8 @@
 
     <div class="eventCarousel"></div>
 
-    <a href="<?php echo get_post_type_archive_link('event'); ?>">
+
+    <a href="/events">
         <p class="homePage__eventsLink"><u>se alla event</u></p>
     </a>
 

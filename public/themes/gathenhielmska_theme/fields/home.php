@@ -3,15 +3,15 @@
 if (function_exists('acf_add_local_field_group')) :
 
     acf_add_local_field_group(array(
-        'key' => 'group_5e775701dccac',
+        'key' => 'group_5e9322d627cbc',
         'title' => 'Home',
         'fields' => array(
             array(
-                'key' => 'field_5e775772b7204',
-                'label' => 'Hero Image',
+                'key' => 'field_5e9322ea2f1e7',
+                'label' => 'Hero image',
                 'name' => 'hero_image',
                 'type' => 'image',
-                'instructions' => 'Add a image to be displayed at the top of the home page.',
+                'instructions' => 'An image to be displayed at the top of the home page',
                 'required' => 1,
                 'conditional_logic' => 0,
                 'wrapper' => array(
@@ -31,11 +31,11 @@ if (function_exists('acf_add_local_field_group')) :
                 'mime_types' => '',
             ),
             array(
-                'key' => 'field_5e7757b5b7205',
-                'label' => 'Hero Text',
-                'name' => 'hero_text',
-                'type' => 'textarea',
-                'instructions' => 'Text to be displayed on the hero image at the top of the home page.',
+                'key' => 'field_5e9323222f1e8',
+                'label' => 'Hero headline',
+                'name' => 'hero_headline',
+                'type' => 'text',
+                'instructions' => 'A headline for the hero image',
                 'required' => 1,
                 'conditional_logic' => 0,
                 'wrapper' => array(
@@ -45,9 +45,28 @@ if (function_exists('acf_add_local_field_group')) :
                 ),
                 'default_value' => '',
                 'placeholder' => '',
+                'prepend' => '',
+                'append' => '',
                 'maxlength' => '',
-                'rows' => '',
-                'new_lines' => '',
+            ),
+            array(
+                'key' => 'field_5e93233c2f1e9',
+                'label' => 'Hero text',
+                'name' => 'hero_text',
+                'type' => 'text',
+                'instructions' => 'a short text for the hero image.',
+                'required' => 1,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'default_value' => '',
+                'placeholder' => '',
+                'prepend' => '',
+                'append' => '',
+                'maxlength' => '',
             ),
         ),
         'location' => array(
@@ -68,7 +87,7 @@ if (function_exists('acf_add_local_field_group')) :
             0 => 'the_content',
         ),
         'active' => true,
-        'description' => 'For changing the hero image and text on the home page.',
+        'description' => '',
     ));
 
 endif;
