@@ -43,7 +43,7 @@
 
                     <div>
                         <a href="<?php the_permalink(); ?>">
-                            <img src="<?php the_field("image"); ?>" alt="" loading="lazy">
+                            <img src="<?php the_field("image"); ?>" alt="">
                             <div class="homePage__newsContainer__textContainer">
                                 <h2><?php the_title(); ?></h2>
                                 <p><?php the_field('tagline') ?></p>
@@ -55,7 +55,7 @@
 
                     <div class="homePage__newsContainer__lastTwoItems">
                         <a href="<?php the_permalink(); ?>">
-                            <img src="<?php the_field("image"); ?>" alt="" loading="lazy">
+                            <img src="<?php the_field("image"); ?>" alt="">
                             <div class="homePage__newsContainer__textContainer">
                                 <h2><?php the_title(); ?></h2>
                             </div>
