@@ -15,19 +15,19 @@
 
 .pictures {
   margin-left: 100px;
-  color: $unselectedDeepTurquoise;
-  @include H2;
+  color: $lineBlue;
+  @include H1;
 }
 
 .videos {
   margin-right: 100px;
-  color: $unselectedDeepTurquoise;
-  @include H2;
+  color: $lineBlue;
+  @include H1;
 }
 
 .divider {
-  color: $deepTurquoise;
-  @include H2;
+  color: $mandarin;
+  @include H1;
 }
 
 .seeMoreStyling,

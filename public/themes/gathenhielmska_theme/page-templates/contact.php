@@ -81,7 +81,9 @@
             <p>414 63 Göteborg</p>
         </div>
         <img src="<?php bloginfo('template_directory') ?>/assets/images/map.png" alt="gathenhielmska-map">
-        <p class = "directions"><h3 class = "directions">Vägbeskrivning: </h3>Närmaste hållplats är blablabla och intill denfinns bla bla. Sen borde du se dadada. Sen är du där cacaca</p>
+        <div class="directions-div">
+            <p class = "directions"><h3 class = "directions">Vägbeskrivning: </h3>Närmaste hållplats är blablabla och intill denfinns bla bla. Sen borde du se dadada. Sen är du där cacaca</p>
+        </div>
     </div>
 
 
