@@ -1,23 +1,18 @@
 <?php /* Template Name: Hire Venues */ ?>
 <?php get_header(); ?>
 
-
-
 <div class="news-container">
+    <img class = "floral-divider" src="<?php bloginfo('template_directory') ?>/assets/images/floral-divider.png" alt="floral-divider">
     <div class = "opacity-div"></div>
     <div class = "booking-form">
         <form name="hire-venue-form" method="post" action="">
             <input type="text" placeholder="För- & Efternamn">
             <input type="text" placeholder="Titel på event">
             <input type="text" placeholder="Antal anordnare">
-            <!-- <div> -->
-                <input type="date" placeholder="Datum">
-                <!-- <div class="calendar">
-                    <div class="calendar-section1"></div>
-                    <div class="calendar-section1"></div>
-                </div> -->
-                <!-- <div></div> -->
-            <!-- </div> -->
+            <div class="date-time-div">
+                <input class="date-input" type="date">
+                <input class="time-input" type="time">
+            </div>
             <input type="text" placeholder="Event kategori">
             <div>
                 <input type="text" placeholder="Event bildfil">
@@ -43,8 +38,8 @@
 
             <div class = "individual-venue-box">
                 <img class = "venue-img" src="<?php echo customFieldExcerpt(get_field("photo"), 1, ""); ?>" alt="">
-                <h2 class = "venue-name"><?php echo strtoupper(customFieldExcerpt(get_field("venue_name"), 4, "")); ?></h2>
-                <p class = "venue-capacity">Kapacitet: <?php echo customFieldExcerpt(get_field("capacity"), 1, ""); ?> personer</p>
+                <h1 class = "venue-name"><?php echo strtoupper(customFieldExcerpt(get_field("venue_name"), 4, "")); ?></h1>
+                <p class = "venue-capacity">Upp till <?php echo customFieldExcerpt(get_field("capacity"), 1, ""); ?> personer</p>
                 <p class = "venue-availability"><?php echo customFieldExcerpt(get_field("availability_status"), 5, ""); ?></p>
             </div>
             <div class = "book-button"><h2>BOKNINGSFÖRFRÅGAN</h2></div>
@@ -58,12 +53,6 @@
         <?php endif; ?>
     </div>
 
-
-
-
-
-
 </div>
 
 <?php get_footer(); ?>
-

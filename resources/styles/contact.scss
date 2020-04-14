@@ -40,7 +40,7 @@
 }
 
 .find-us-box img {
-  padding: 20px 0 8px 0;
+  border: 1px solid $mandarin;
 }
 
 .address {
@@ -52,6 +52,10 @@
   margin: 4px 0;
 }
 
+.address-text {
+  padding-bottom: 20px;
+}
+
 .address svg {
   padding: 0 4px 4px 0;
 }
@@ -59,6 +63,11 @@
 .directions {
   display: inline;
   white-space: nowrap;
+  color: $deepTurquoise !important;
+}
+
+.directions-div {
+  margin-top: 10px;
 }
 
 

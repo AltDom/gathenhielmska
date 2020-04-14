@@ -15,7 +15,8 @@
 @import "archive.scss";
 @import "contact.scss";
 @import "history.scss";
-@import "hire-venues.scss";
+@import "hireVenues.scss";
+@import "guidedTours.scss";
 @import "footer.scss";
 @import "singleEvent.scss";
 @import "homePage.scss";
@@ -38,22 +39,30 @@ body {
 h1 {
   @include H1;
   font-weight: 400;
+  color: $deepTurquoise;
 }
 
 h2 {
   @include H2;
   font-weight: normal;
+  color: $deepTurquoise;
 }
 
 h3 {
   @include tagline;
+  color: $deepTurquoise;
 }
 
 p {
   @include paragraph;
+  color: $deepTurquoise;
 }
 
 .h1-center {
   @include H1;
   text-align: center;
+}
+
+*:focus {
+  outline: none;
 }

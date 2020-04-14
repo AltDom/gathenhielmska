@@ -28,7 +28,7 @@ $categories = get_the_terms($post, 'category'); ?>
         </article>
     <?php endif; ?>
     <div class="seeMoreStyling">
-        <a href="<?php echo get_post_type_archive_link( 'post' ); ?>">tillbaks till artiklar</a>
+        <a href="/news">tillbaks till artiklar</a>
     </div>
 </main>
 

@@ -1,0 +1,43 @@
+.individual-tour-box {
+  margin-top: 20px;
+}
+
+.tour-div {
+  display: flex;
+}
+
+.tour-div h1 {
+  margin: 0 0;
+  width: 50%;
+}
+
+.tour-div h2 {
+  margin: 10px 0 0 0;
+  width: 50%;
+}
+
+.tour-div p {
+  margin: 10px 0 0 0;
+  width: 50%;
+}
+
+.tour-time {
+  color: $mandarin;
+}
+
+.book-ticket-button {
+  @include flexCenterCenter;
+  background-color: $deepTurquoise;
+  height: 44px;
+  width: 100%;
+}
+
+.book-ticket-button h2 {
+  color: $whitewashWhite !important;
+}
+
+.prices-text p {
+  margin: 0 0 5px 0;
+}
+
+

@@ -1,5 +1,5 @@
 .venue-img {
-  opacity: 0.7;
+  opacity: 0.4;
   padding-top: 15px;
 }
 
@@ -12,25 +12,27 @@
 
 .venue-name {
   position: absolute;
-  top: 20px;
-  left: 10px;
+  top: 10px;
+  text-align: center;
+  border-bottom: 2px solid $mandarin;
 }
 
 .venue-capacity {
   position: absolute;
-  top: 50px;
-  left: 10px;
+  width: 140px;
+  top: 70px;
+  text-align: center;
 }
 
 .venue-availability {
   position: absolute;
-  top: 70px;
-  left: 10px;
+  width: 140px;
+  top: 100px;
+  text-align: center;
 }
 
 .book-button {
   @include flexCenterCenter;
-  color: $whitewashWhite;
   background-color: $deepTurquoise;
   height: 44px;
   width: 100%;
@@ -38,6 +40,7 @@
 
 .book-button h2 {
   margin: 0;
+  color: $whitewashWhite !important;
 }
 
 .opacity-div {
@@ -76,21 +79,38 @@
   color: $deepTurquoise;
   @include paragraph;
   background-color: $whitewashWhite;
-  border: 1px solid $deepTurquoise;
+  border: 0.5px solid $deepTurquoise;
+}
+
+.booking-form input ::placeholder {
+  color: $deepTurquoise !important;
+  @include paragraph;
+  font-style: italic;
+  // padding-left: 10px;
+  // opacity: 1;
 }
 
 .booking-form input[type=date] {
-  width: 100%;
+  width: 331px;
   height: 46px;
   padding-left: 10px;
   color: $deepTurquoise;
   @include paragraph;
   background-color: $whitewashWhite;
-  border: 1px solid $deepTurquoise;
+  border: 0.5px solid $deepTurquoise;
 }
 
 .about-event-input {
   height: 190px !important;
+}
+
+.date-time-div {
+  width: 331px;
+  display: flex;
+}
+
+.date-input, .time-input {
+  width: 165.5px !important;
 }
 
 .about-event-input ::placeholder {
@@ -103,7 +123,7 @@
   background-color: $mandarin;
   color: $deepTurquoise;
   @include H1;
-  border: 1px solid $deepTurquoise;
+  border: 0.5px solid $mandarin;
 }
 
 
