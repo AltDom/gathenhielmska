@@ -83,7 +83,10 @@
                 <div class="homePage__newsContainer__item">
                     <img src="<?php the_field('image') ?>" alt="">
                     <div class="homePage__newsContainer__textContainer">
-                        <h2>LALALALALALA</h2>
+                        <h2 class="homePage__newsContainer__textContainer__title"><?php echo the_title(); ?></h2>
+                        <a href="<?php the_permalink(); ?>">
+                            <h2 class="homePage__newsContainer__textContainer__readMore">LÄS ARTIKELN</h2>
+                        </a>
                     </div>
                 </div>
 
@@ -94,6 +97,16 @@
     <?php else : ?>
         <p><?php __('No News'); ?></p>
     <?php endif; ?>
+
+    <div class="homePage__booking">
+        <h1>BOKA VÅRA SALAR</h1>
+        <p>Möjlighet att boka våra salar för att hålla ett event eller varför inte en worshop med företaget i inspirerande miljö.</p>
+        <div>
+            <a href="#">
+                <h2>LÄS MER OCH BOKA</h2>
+            </a>
+        </div>
+    </div>
 
 
 

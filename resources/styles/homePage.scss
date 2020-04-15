@@ -16,6 +16,12 @@
   }
 }
 
+.homePage__h1 {
+  font-size: 20px;
+  margin-top: 32px;
+  margin-bottom: 16px;
+}
+
 .homePage__heroContainer {
   position: relative;
   width: 100%;
@@ -75,10 +81,12 @@
 
 .homePage__newsContainer {
   width: 92%;
+  div:first-child {
+    margin-bottom: 8px;
+  }
   .homePage__newsContainer__item {
     height: 185px;
     position: relative;
-    margin-bottom: 8px;
     img {
       width: 100%;
       height: 100%;
@@ -91,15 +99,41 @@
     height: 75px;
     bottom: 0;
     background: linear-gradient(180.92deg, rgba(31, 54, 52, 0) 0.06%, rgba(31, 54, 52, 0.93) 64.41%);
-    h2 {
-      color: $white;
+
+    .homePage__newsContainer__textContainer__title {
+      left: 8px;
+      width: 150px;
+      color: $whitewashWhite;
+      position: absolute;
+      text-transform: uppercase;
+      margin: 0;
+      bottom: 8px;
+    }
+    .homePage__newsContainer__textContainer__readMore {
+      right: 8px;
+      color: $mandarinAccent;
+      position: absolute;
+      text-transform: uppercase;
+      margin: 0;
+      bottom: 8px;
     }
   }
 }
 
-.homePage__h1 {
-  font-size: 20px;
-  margin-top: 32px;
-  margin-bottom: 16px;
+.homePage__booking {
+  margin: 32px 16px;
+  h1 {
+    margin-top: 16px;
+    margin-bottom: 8px;
+  }
+  p {
+    margin-top: 0;
+    margin-bottom: 18px;
+  }
+  div {
+    height: 44px;
+    background-color: $mandarinAccent;
+    @include flexCenterCenter;
+  }
 }
 
