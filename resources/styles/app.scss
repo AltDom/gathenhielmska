@@ -75,3 +75,9 @@ p {
 *:focus {
   outline: none;
 }
+
+.readMoreLink {
+  text-transform: uppercase;
+  border-bottom: 1px solid $mandarinAccent;
+
+}

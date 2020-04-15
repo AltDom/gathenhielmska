@@ -64,7 +64,7 @@
 
 
     <a href="/events">
-        <p class="homePage__eventsLink"><u>se alla event</u></p>
+        <h2 class="readMoreLink">se alla event</h2>
     </a>
 
     <!-- Nyheter -->
@@ -72,41 +72,21 @@
     <?php
     $the_query = new WP_Query([
         'post_type' => 'post',
-        'posts_per_page' => 3
+        'posts_per_page' => 2
     ]);
-    $isFirstItem = true;
     ?>
 
     <?php if ($the_query->have_posts()) : ?>
         <div class="homePage__newsContainer">
             <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
 
-                <?php if ($isFirstItem) : ?>
-
-                    <div>
-                        <a href="<?php the_permalink(); ?>">
-                            <img src="<?php the_field("image"); ?>" alt="">
-                            <div class="homePage__newsContainer__textContainer">
-                                <h2><?php the_title(); ?></h2>
-                                <p><?php the_field('tagline') ?></p>
-                            </div>
-                        </a>
+                <div class="homePage__newsContainer__item">
+                    <img src="<?php the_field('image') ?>" alt="">
+                    <div class="homePage__newsContainer__textContainer">
+                        <h2>LALALALALALA</h2>
                     </div>
+                </div>
 
-                <?php else : ?>
-
-                    <div class="homePage__newsContainer__lastTwoItems">
-                        <a href="<?php the_permalink(); ?>">
-                            <img src="<?php the_field("image"); ?>" alt="">
-                            <div class="homePage__newsContainer__textContainer">
-                                <h2><?php the_title(); ?></h2>
-                            </div>
-                        </a>
-                    </div>
-
-                <?php endif; ?>
-
-                <?php $isFirstItem = false; ?>
             <?php endwhile; ?>
         </div>
         <?php wp_reset_postdata(); ?>
