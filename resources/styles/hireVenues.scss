@@ -15,6 +15,7 @@
   top: 10px;
   text-align: center;
   border-bottom: 2px solid $mandarin;
+  text-transform: uppercase;
 }
 
 .venue-capacity {
@@ -41,6 +42,7 @@
 .book-button h2 {
   margin: 0;
   color: $whitewashWhite !important;
+  pointer-events: none;
 }
 
 .opacity-div {
@@ -59,17 +61,24 @@
   display: none;
   justify-content: center;
   position: fixed;
-  top: 15%;
+  top: 11%;
   left: 10%;
   width: 80%;
-  height: 70vh;
+  // height: 70vh;
   background-color: $whitewashWhite;
   z-index: 100;
   opacity: 1 !important;
 }
 
 .booking-form form {
-  border: 1px solid $deepTurquoise;
+  border: 2px solid $deepTurquoise;
+}
+
+.booking-form #label {
+  @include H2;
+  text-transform: uppercase;
+  text-align: center !important;
+  width: 100%;
 }
 
 .booking-form input {
@@ -79,10 +88,13 @@
   color: $deepTurquoise;
   @include paragraph;
   background-color: $whitewashWhite;
-  border: 0.5px solid $deepTurquoise;
+  border-color: $deepTurquoise;
+  border-width: 1px 0;
+  // border-style: solid;
+  // border: 0.5px 0 solid $deepTurquoise;
 }
 
-.booking-form input ::placeholder {
+.booking-form input ::-webkit-input-placeholder {
   color: $deepTurquoise !important;
   @include paragraph;
   font-style: italic;
@@ -91,13 +103,13 @@
 }
 
 .booking-form input[type=date] {
-  width: 331px;
+  width: 100%;
   height: 46px;
   padding-left: 10px;
   color: $deepTurquoise;
   @include paragraph;
   background-color: $whitewashWhite;
-  border: 0.5px solid $deepTurquoise;
+  // border: 0.5px 0 solid $deepTurquoise;
 }
 
 .about-event-input {
@@ -105,25 +117,44 @@
 }
 
 .date-time-div {
-  width: 331px;
+  width: 100%;
   display: flex;
 }
 
 .date-input, .time-input {
-  width: 165.5px !important;
+  width: 50% !important;
 }
 
-.about-event-input ::placeholder {
+.about-event-input ::-webkit-input-placeholder {
   vertical-align: top !important;
 }
 
 .booking-form button {
   width: 100%;
-  height: 52px;
+  height: 46px;
   background-color: $mandarin;
   color: $deepTurquoise;
+  border-style: hidden;
   @include H1;
-  border: 0.5px solid $mandarin;
+}
+
+.upload-button-wrapper {
+  display: flex;
+  flex-direction: row-reverse;
+  position: relative;
+  // border: 0.5px solid $deepTurquoise;
+}
+
+.upload-input {
+  width: 80% !important;
+  position: absolute;
+  opacity: 0;
+}
+
+.upload-picture-button {
+  width: 20% !important;
+  background-color: $lineBlue !important;
+  color: $whitewashWhite !important;
 }
 
 

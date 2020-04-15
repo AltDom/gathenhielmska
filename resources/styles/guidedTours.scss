@@ -34,10 +34,15 @@
 
 .book-ticket-button h2 {
   color: $whitewashWhite !important;
+  pointer-events: none;
 }
 
 .prices-text p {
   margin: 0 0 5px 0;
+}
+
+.tour-date-input {
+  width: 100% !important;
 }
 
 

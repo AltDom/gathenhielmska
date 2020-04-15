@@ -4,8 +4,6 @@
     </div>
     <footer>
         <div class="footer-container">
-            <div class="floral-left"></div>
-            <div class="floral-right"></div>
 
             <h1 class="h1">NYHETSBREV</h1>
             <p class="paragraph">Fyll i din epostadress för att få vårt nyhetsbrev</p>

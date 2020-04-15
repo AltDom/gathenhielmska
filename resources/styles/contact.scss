@@ -1,10 +1,15 @@
+.contact-floral-background {
+  background: url(./../images/flowers-background.png) 60% 60% no-repeat;
+
+}
+
 .staff-member-box {
   color: $deepTurquoise;
   text-align: center;
 }
 
 .staff-img {
-  width: 178px;
+  width: 205px;
   height: 178px;
 }
 
@@ -53,7 +58,7 @@
 }
 
 .address-text {
-  padding-bottom: 20px;
+  padding-bottom: 25px;
 }
 
 .address svg {
@@ -61,13 +66,12 @@
 }
 
 .directions {
-  display: inline;
-  white-space: nowrap;
   color: $deepTurquoise !important;
+  display: inline;
 }
 
 .directions-div {
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
 

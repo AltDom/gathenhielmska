@@ -7,14 +7,15 @@
     <div class = "opacity-div"></div>
     <div class = "booking-form">
         <form name="group-tour-form" method="post" action="">
+            <label>GRUPPBOKNING</label>
             <input type="text" placeholder="För- & Efternamn">
             <input type="text" placeholder="Email">
+            <input type="text" placeholder="Telefonnummer">
             <input type="text" placeholder="Antal i gruppen">
             <div class="date-time-div">
-                <input class="date-input" type="date">
-                <input class="time-input" type="time">
+                <input class="tour-date-input" type="date">
             </div>
-            <input class="about-event-input" type="text" placeholder="Om gruppen. Kontakt. Förmiddag/Eftermiddag">
+            <input class="about-event-input" type="text" placeholder="Meddelande">
             <button>SKICKA</button>
         </form>
     </div>

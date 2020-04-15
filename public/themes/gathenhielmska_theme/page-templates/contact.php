@@ -2,37 +2,40 @@
 <?php get_header(); ?>
 
 
+<div class = "contact-floral-background">
+    <div class="news-container">
+        <div class = "staff-box">
+            <h1 class="h1-center">VI ÄR GATHENHIELMSKA</h1>
+            <?php
+            $the_query = new WP_Query([
+                'posts_per_page' => 3,
+                'post_type' => 'staff'
+            ]);
+            ?>
+
+            <?php if ($the_query->have_posts()) : ?>
+                <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+
+                <div class = "staff-member-box">
+                    <img class = "staff-img" src="<?php echo customFieldExcerpt(get_field("profile_photo"), 1, ""); ?>" alt="">
+                    <h2><?php echo strtoupper(customFieldExcerpt(get_field("name"), 4, "")); ?></h2>
+                    <h3><?php echo customFieldExcerpt(get_field("position"), 1, ""); ?></h3>
+                    <p>tlf: <?php echo customFieldExcerpt(get_field("phone_number"), 1, ""); ?></p>
+                    <p><?php echo customFieldExcerpt(get_field("email"), 1, ""); ?></p>
+                </div>
+
+                <?php endwhile; ?>
+                <?php wp_reset_postdata(); ?>
+
+            <?php else : ?>
+                <!-- dont know what the __() is about -->
+                <p><?php __('No Staff'); ?></p>
+            <?php endif; ?>
+        </div>
+    </div>
+</div>
 
 <div class="news-container">
-    <div class = "staff-box">
-        <h1 class="h1-center">VI ÄR GATHENHIEMSKA</h1>
-        <?php
-        $the_query = new WP_Query([
-            'posts_per_page' => 3,
-            'post_type' => 'staff'
-        ]);
-        ?>
-
-        <?php if ($the_query->have_posts()) : ?>
-            <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
-
-            <div class = "staff-member-box">
-                <img class = "staff-img" src="<?php echo customFieldExcerpt(get_field("profile_photo"), 1, ""); ?>" alt="">
-                <h2><?php echo strtoupper(customFieldExcerpt(get_field("name"), 4, "")); ?></h2>
-                <h3><?php echo customFieldExcerpt(get_field("position"), 1, ""); ?></h3>
-                <p>tlf: <?php echo customFieldExcerpt(get_field("phone_number"), 1, ""); ?></p>
-                <p><?php echo customFieldExcerpt(get_field("email"), 1, ""); ?></p>
-            </div>
-
-            <?php endwhile; ?>
-            <?php wp_reset_postdata(); ?>
-
-        <?php else : ?>
-            <!-- dont know what the __() is about -->
-            <p><?php __('No Staff'); ?></p>
-        <?php endif; ?>
-    </div>
-
     <div class = "affiliates-box">
         <h1 class="h1-center">ÖVRIGA VERKSAMHETER I HUSET</h1>
 
@@ -82,7 +85,8 @@
         </div>
         <img src="<?php bloginfo('template_directory') ?>/assets/images/map.png" alt="gathenhielmska-map">
         <div class="directions-div">
-            <p class = "directions"><h3 class = "directions">Vägbeskrivning: </h3>Närmaste hållplats är blablabla och intill denfinns bla bla. Sen borde du se dadada. Sen är du där cacaca</p>
+            <h3 class = "directions">Vägbeskrivning: </h3>
+            <p class = "directions">Närmaste hållplats är blablabla och intill denfinns bla bla. Sen borde du se dadada. Sen är du där cacaca</p>
         </div>
     </div>
 
