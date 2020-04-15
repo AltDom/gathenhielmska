@@ -8,10 +8,11 @@
             <h1 class="h1">NYHETSBREV</h1>
             <p class="paragraph">Fyll i din epostadress för att få vårt nyhetsbrev</p>
 
-            <div>
-                <input class="mailing-list-input" type="text" placeholder="Fyll i din epostadress här...">
-                <button class="mailing-list-button">REGISTRERA</button>
-            </div>
+            <form action="/email/" method="POST">
+                <input class="mailing-list-input" type="text" name="applicant-email" placeholder="Fyll i din epostadress här..." required>
+                <input type="hidden" name="path" value="/">
+                <button class="mailing-list-button" type="submit">REGISTRERA</button>
+            </form>
 
             <h1 class="h1">KONTAKTA OSS</h1>
             <p class="paragraph">gathenhielmska@info.se</p>

@@ -3,16 +3,16 @@
 <?php
 
 use PHPMailer\PHPMailer\PHPMailer;
-require __DIR__.'/../../../../vendor/autoload.php';
+require '../vendor/autoload.php';
 
-// die(var_dump(__DIR__.'/../../../../vendor/autoload.php'));
+// die(var_dump($_POST));
 
 if(isset($_POST['applicant-email'], $_POST['path']) && PHPMailer::validateAddress($_POST['applicant-email'])) {
     $from = trim(filter_var($_POST['applicant-email'], FILTER_SANITIZE_EMAIL));
     $path = trim(filter_var($_POST['path'], FILTER_SANITIZE_STRING));
     $name = trim(filter_var($_POST['applicant-name'], FILTER_SANITIZE_STRING));
-    // Adjust this! Should be an gmail address string.
-    $to = '';
+    // Adjust this! Should be a gmail address.
+    $to = 'worldsurfintrigue@gmail.com';
 
     $mail = new PHPMailer;
     $mail->isSMTP();
@@ -27,10 +27,10 @@ if(isset($_POST['applicant-email'], $_POST['path']) && PHPMailer::validateAddres
     $mail->SMTPSecure = 'ssl';
 
     /* SMTP authentication username. */
-    $mail->Username = '';
+    $mail->Username = 'kerschdominic';
 
     /* SMTP authentication password. */
-    $mail->Password = '';
+    $mail->Password = 'Dker9586';
 
     /* Set the SMTP port. */
     $mail->Port = 465;
@@ -42,10 +42,11 @@ if(isset($_POST['applicant-email'], $_POST['path']) && PHPMailer::validateAddres
     //It's important not to use the submitter's address as the from address as it's forgery,
     //which will cause your messages to fail SPF checks.
     //Use an address in your own domain as the from address, put the submitter's address in a reply-to
-    $mail->setFrom($from, (empty($name) ? 'Venue booking' : $name));
-    $mail->addAddress($to);
+
 
     if(isset($_POST['venue'])) {
+        $mail->setFrom($from, (empty($name) ? 'Venue booking' : $name));
+        $mail->addAddress($to);
 
         $venue = trim(filter_var($_POST['venue'], FILTER_SANITIZE_STRING));
         $phone = trim(filter_var($_POST['phone-number'], FILTER_SANITIZE_STRING));
@@ -59,25 +60,32 @@ if(isset($_POST['applicant-email'], $_POST['path']) && PHPMailer::validateAddres
         } else {
             $about = "";
         }
-
         $subject = 'Expression of interest: ' . $venue;
         $message = "$name / $from  / $phone\nis interested in hosting '$event' ($category)\nat $time on $date with the assistance of $numberOrganisers organisers.\nAdditional info: $about";
-
         $mail->Subject = $subject;
         $mail->Body = $message;
-        if (!$mail->send()) {
-            $msg .= 'Mailer Error: '. $mail->ErrorInfo;
-        } else {
-            $msg .= 'Message sent!';
-        }
+
     }
 
     if(isset($_POST['group-number'])) {
 
     }
 
-    if(isset($_POST['mailing-list'])) {
+    if($_POST['path']=="/") {
+        $mail->setFrom($from, (empty($name) ? 'Join the mailing list' : $name));
+        $mail->addAddress($to);
 
+        $subject = 'Join the mailing list: ' . $from;
+        $message = "$from has submitted a request to be added to the Gathenhielmska mailing list.";
+        $mail->Subject = $subject;
+        $mail->Body = $message;
+
+    }
+
+    if (!$mail->send()) {
+        $msg .= 'Mailer Error: '. $mail->ErrorInfo;
+    } else {
+        $msg .= 'Message sent!';
     }
 
 
