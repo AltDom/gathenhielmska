@@ -25,7 +25,7 @@ if(isset($_POST['applicant-email'], $_POST['path']) && PHPMailer::validateAddres
     /* SMTP authentication username. eg. use "gathhuset" if the email address is gathhuset@gmail.com */
     $mail->Username = 'kerschdominic';
     /* SMTP authentication password. The email above's password. */
-    $mail->Password = 'Dker9586';
+    $mail->Password = '';
     /* Set the SMTP port. */
     $mail->Port = 465;
     $mail->CharSet = PHPMailer::CHARSET_UTF8;
