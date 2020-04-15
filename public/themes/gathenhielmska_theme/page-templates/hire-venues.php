@@ -5,25 +5,30 @@
     <img class = "floral-divider" src="<?php bloginfo('template_directory') ?>/assets/images/floral-divider.png" alt="floral-divider">
     <div class = "opacity-div"></div>
     <div class = "booking-form">
-        <form name="hire-venue-form" method="post" action="">
-            <input type="text" placeholder="För- & Efternamn">
-            <input type="text" placeholder="Titel på event">
-            <input type="text" placeholder="Antal anordnare">
+        <form name="hire-venue-form" method="post" action="/email/" enctype="multipart/form-data">
+            <label id="label"></label>
+            <input type="hidden" id="venue" name="venue" value="">
+            <input type="hidden" name="path" value="/hyr-vara-lokaler/">
+            <input type="text" name="applicant-name" placeholder="För- & Efternamn" required>
+            <input type="text" name="applicant-email" placeholder="Email" required>
+            <input type="text" name="phone-number" placeholder="Telefonnummer" required>
+            <input type="text" name="event-name" placeholder="Titel på event" required>
+            <input type="text" name="number-organisers" placeholder="Antal anordnare" required>
             <div class="date-time-div">
-                <input class="date-input" type="date">
-                <input class="time-input" type="time">
+                <input class="date-input" name="hire-date" type="date" required>
+                <input class="time-input" name="hire-time" type="time" required>
             </div>
-            <input type="text" placeholder="Event kategori">
-            <div>
-                <input type="text" placeholder="Event bildfil">
-                <div></div>
+            <input type="text" name="category" placeholder="Event kategori" required>
+            <div class="upload-button-wrapper">
+                <input class="upload-input" type="file" accept=".jpg, .jpeg, .png" name="event-picture" placeholder="Event bildfil">
+                <button class="upload-picture-button">+</button>
             </div>
-            <input class="about-event-input" type="text" placeholder="Om gruppen. Kontakt. Förmiddag/Eftermiddag">
-            <button>SKICKA</button>
+            <input class="about-event-input" type="text" name="about-event" placeholder="Om gruppen">
+            <button type="submit">SKICKA</button>
         </form>
     </div>
 
-    <p>intresserad av att hyra våra lokaler för ett event eller er nästa konferens. Nedan listar vi våra våra olika alternativ. Välkommen att kontakta oss vid intresse</p>
+    <p>Intresserad av att hyra våra lokaler för ett event eller er nästa konferens. Nedan listar vi våra våra olika alternativ. Välkommen att kontakta oss vid intresse.</p>
 
     <div class = "venues-box">
         <?php
@@ -42,7 +47,7 @@
                 <p class = "venue-capacity">Upp till <?php echo customFieldExcerpt(get_field("capacity"), 1, ""); ?> personer</p>
                 <p class = "venue-availability"><?php echo customFieldExcerpt(get_field("availability_status"), 5, ""); ?></p>
             </div>
-            <div class = "book-button"><h2>BOKNINGSFÖRFRÅGAN</h2></div>
+            <div id="<?php echo strtoupper(customFieldExcerpt(get_field("venue_name"), 4, "")); ?>" class="book-button"><h2>BOKNINGSFÖRFRÅGAN</h2></div>
 
             <?php endwhile; ?>
             <?php wp_reset_postdata(); ?>

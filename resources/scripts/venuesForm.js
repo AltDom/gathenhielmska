@@ -5,12 +5,19 @@ const venuesForm = () => {
   const bookButtons = document.querySelectorAll(".book-button");
   if(bookButtons) {
 
-    const toggleBookingForm = () => {
+    const toggleBookingForm = (event) => {
       const bookingForm = document.querySelector(".booking-form");
       if (bookingForm.style.display !== "flex") {
         bookingForm.style.display = "flex";
         bookingForm.style.setProperty('opacity', '1', 'important');
-        setTimeout(function (){
+        if(document.getElementById("venue")) {
+          const label = document.getElementById("label");
+          const input = document.getElementById("venue");
+          const venue = event.target.id;
+          input.value = venue;
+          label.innerHTML = venue;
+        }
+        setTimeout(function () {
           setBookingFormClosingListener();
         }, 1);
       } else if (bookingForm.style.display == "flex") {
@@ -26,7 +33,6 @@ const venuesForm = () => {
 
       const clickedBody = function(event) {
         event.preventDefault();
-        console.log(isClickedOutside)
         const bookingForm = document.querySelector(".booking-form");
         const isClickedOutside = !bookingForm.contains(event.target);
         if (isClickedOutside) {
