@@ -46,12 +46,14 @@ h1 {
   @include H1;
   font-weight: 400;
   color: $deepTurquoise;
+  font-size: 24px;
 }
 
 h2 {
   @include H2;
   font-weight: normal;
   color: $deepTurquoise;
+  font-size: 18px;
 }
 
 h3 {
@@ -62,6 +64,7 @@ h3 {
 p {
   @include paragraph;
   color: $deepTurquoise;
+  font-size: 16px;
 }
 
 .h1-center {

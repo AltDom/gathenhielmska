@@ -10,10 +10,52 @@
             <img src="<?php the_field('hero_image') ?>" alt="hero image" class="homePage__heroContainer__heroImage">
             <div class="homePage__heroContainer__textContainer">
                 <h1><?php the_field('hero_headline'); ?></h1>
-                <p><?php the_field('hero_text'); ?></p>
             </div>
         </div>
     <?php endwhile; ?>
+
+    <!-- Links -->
+    <div class="homePage__linksContainer">
+
+        <div>
+            <img src="<?php bloginfo('template_directory') ?>/assets/images/homePageLink1.png" alt="">
+            <a href="#">
+                <h2>historia</h2>
+            </a>
+        </div>
+        <div>
+            <img src="<?php bloginfo('template_directory') ?>/assets/images/homePageLink2.png" alt="">
+            <a href="/events">
+                <h2>evenemang</h2>
+            </a>
+        </div>
+        <div>
+            <img src="<?php bloginfo('template_directory') ?>/assets/images/homePageLink3.png" alt="">
+            <a href="#">
+                <h2>arkiv</h2>
+            </a>
+        </div>
+        <div>
+            <img src="<?php bloginfo('template_directory') ?>/assets/images/homePageLink4.png" alt="">
+            <a href="#">
+                <h2>hyr lokal</h2>
+            </a>
+        </div>
+        <div>
+            <img src="<?php bloginfo('template_directory') ?>/assets/images/homePageLink5.png" alt="">
+            <a href="/news">
+                <h2>artiklar</h2>
+            </a>
+        </div>
+        <div>
+            <img src="<?php bloginfo('template_directory') ?>/assets/images/homePageLink6.png" alt="">
+            <a href="#">
+                <h2>guidad tur</h2>
+            </a>
+        </div>
+
+    </div>
+
 
     <!-- Events -->
     <h1 class="homePage__h1">PÅ GÅNG</h1>

@@ -1,6 +1,15 @@
 .homePage {
   @include flexCenterCenter;
   flex-direction: column;
+  .eventCard__imageContainer__dateContainer {
+    height: 113px;
+    top: 3px;
+    left: 3px;
+  }
+  .eventCard__textContainer {
+    border-left: 1px solid $deepTurquoise;
+    border-right: 1px solid $deepTurquoise;
+  }
 }
 
 .homePage__heroContainer {
@@ -20,16 +29,44 @@
     background-color: rgba(31, 54, 52, 0.8);
     text-align: center;
     h1 {
-      font-size: 20px;
       color: $whitewashWhite;
       text-transform: uppercase;
-      margin-top: 8px;
-      margin-bottom: 5px;
+      margin: 16px;
     }
-    p {
-      color: $whitewashWhite;
-      margin-bottom: 8px;
-      margin-top: 0;
+  }
+}
+
+.homePage__linksContainer {
+  height: 168px;
+  width: 92%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: space-between;
+  flex-wrap: wrap;
+  div {
+    background-color: red;
+    height: 52px;
+    width: 49%;
+    position: relative;
+    @include flexCenterCenter;
+    img {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+    h2 {
+      color: $white;
+      position: absolute;
+      z-index: 10;
+      margin: 0;
+      text-transform: uppercase;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      text-align: center;
     }
   }
 }
@@ -105,7 +142,7 @@
 
 .homePage__h1 {
   font-size: 20px;
-  margin-top: 24px;
+  margin-top: 22px;
   margin-bottom: 16px;
 }
 
