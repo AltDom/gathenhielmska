@@ -30,7 +30,6 @@ html {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-
 }
 
 body {
@@ -47,6 +46,7 @@ h1 {
   font-weight: 400;
   color: $deepTurquoise;
   font-size: 24px;
+  text-transform: uppercase;
 }
 
 h2 {
@@ -54,6 +54,7 @@ h2 {
   font-weight: normal;
   color: $deepTurquoise;
   font-size: 18px;
+  text-transform: uppercase;
 }
 
 h3 {
