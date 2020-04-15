@@ -15,11 +15,11 @@ const singleEvent = () => {
 
         singleEvent.innerHTML = `<img class="singleEvent__image" src="${values.image}" alt="event image">
         <div class="singleEvent__textWrapper">
-            <div class="singleEvent__textWrapper__performerContainer">
-                <p>${values.performer}</p>
-                <p>${categoryNames}</p>
+            <div class="singleEvent__textWrapper__titleContainer">
+              <p>${categoryNames}</p>
+              <h1>${values.title}</h1>
+              <p>${values.performer}</p>
             </div>
-            <h1>${values.title}</h1>
             <hr>
             <div class="singleEvent__textWrapper__dateTimeContainer">
                 <div>

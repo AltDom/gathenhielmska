@@ -3,7 +3,7 @@
   flex-direction: column;
   .loadMoreBtn {
     margin-top: 0;
-    margin-bottom: 32px;
+    margin-bottom: 0;
   }
 }
 
@@ -12,6 +12,10 @@
   width: 92%;
   height: auto;
   margin-bottom: 0;
+  .readMoreLink {
+    display: inline-block;
+    margin: 0;
+  }
 }
 
 .news-post-box,
@@ -36,7 +40,7 @@
 }
 
 .news-text {
-  margin-bottom: 25px;
+  margin-bottom: 32px;
   @include paragraph;
   max-height: 308px;
   display: -webkit-box;
@@ -54,6 +58,7 @@
 
 .news-tagline {
   margin: 10px 0;
+  margin-top: 24px;
   @include tagline;
 }
 
@@ -79,6 +84,7 @@
   margin: 10px 0;
   @include H1;
   white-space: nowrap;
+  text-transform: uppercase;
 }
 
 .single-news-title {
@@ -101,6 +107,7 @@
 .news-title-date {
   @include flexJustifyBetween;
   border-bottom: 2px solid $mandarinAccent;
+  margin-top: 14px;
 }
 
 a {
@@ -124,5 +131,9 @@ a:hover // Desktop only
   width: 100%;
 }
 
+.readMoreContainer {
+  @include flexCenterCenter;
+  margin-bottom: 32px;
+}
 
 

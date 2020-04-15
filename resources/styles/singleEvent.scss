@@ -18,7 +18,8 @@
 
   hr {
     border-width: 0.5px;
-    border-color: $black;
+    border-color: $mandarinAccent;
+    box-shadow: 0px 1px 4px rgba(255, 164, 80, 0.78);
   }
 
   p {
@@ -27,21 +28,15 @@
   }
 }
 
-.singleEvent__textWrapper__performerContainer {
-  @include flexJustifyBetween;
-  margin-top: 12px;
-
-  p {
-    color: $lineBlue;
-    text-transform: uppercase;
-  }
+.singleEvent__textWrapper__titleContainer {
+  margin: 8px 0;
 }
 
 .singleEvent__textWrapper__dateTimeContainer {
   @include flexCenterCenter;
   justify-content: flex-start;
-  margin-top: 12px;
-  margin-bottom: 8px;
+  margin-top: 8px;
+  margin-bottom: 24px;
 
   p {
     color: $lineBlue;
@@ -57,7 +52,7 @@
   width: 100%;
   background-color: $deepTurquoise;
   @include flexCenterCenter;
-  margin-bottom: 28px;
+  margin-bottom: 24px;
 
   h1 {
     color: $whitewashAccent;
@@ -66,7 +61,7 @@
 
 .singleEvent__carouselTitle {
   text-align: center;
-  margin-bottom: 24px;
+  margin: 24px 0;
   color: $deepTurquoise;
 }
 
