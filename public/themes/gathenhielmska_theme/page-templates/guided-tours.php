@@ -6,17 +6,18 @@
 
     <div class = "opacity-div"></div>
     <div class = "booking-form">
-        <form name="group-tour-form" method="post" action="">
+        <form name="group-tour-form" method="POST" action="/email/">
             <label>GRUPPBOKNING</label>
-            <input type="text" placeholder="För- & Efternamn">
-            <input type="text" placeholder="Email">
-            <input type="text" placeholder="Telefonnummer">
-            <input type="text" placeholder="Antal i gruppen">
+            <input type="hidden" name="path" value="/guidade-turer/">
+            <input type="text" name="applicant-name" placeholder="För- & Efternamn" required>
+            <input type="text" name="applicant-email" placeholder="Email" required>
+            <input type="text" name="phone-number" placeholder="Telefonnummer" required>
+            <input type="text" name="group-size" placeholder="Antal i gruppen" required>
             <div class="date-time-div">
-                <input class="tour-date-input" type="date">
+                <input class="tour-date-input" name="group-date" type="date" required>
             </div>
-            <input class="about-event-input" type="text" placeholder="Meddelande">
-            <button>SKICKA</button>
+            <input class="about-event-input" name="group-about" type="text" placeholder="Meddelande">
+            <button type="submit">SKICKA</button>
         </form>
     </div>
 

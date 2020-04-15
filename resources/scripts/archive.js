@@ -61,21 +61,18 @@ const mediaSelection = () => {
       setTimeout(function (){
         const youtubeItems = document.querySelectorAll(".sby_item");
         youtubeItems.forEach(youtubeItem => {
-          youtubeItem.style.width = '90%';
+          youtubeItem.style.setProperty('width', '90%', 'important');
           youtubeItem.style.margin = '15px 20px 15px 20px';
-          // youtubeItem.style.border = '2px solid $black';
-          // youtubeItem.style.zIndex = '0';
         });
       }, 200);
     })
     const youtubeItems = document.querySelectorAll(".sby_item");
     youtubeItems.forEach(youtubeItem => {
-      youtubeItem.style.width = '90%';
+      youtubeItem.style.setProperty('width', '90%', 'important');
       youtubeItem.style.margin = '15px 20px 15px 20px';
-      // youtubeItem.style.border = '2px solid $black';
-      // youtubeItem.style.zIndex = '0';
     });
     const youtubeVideos = document.querySelector(".sb_youtube");
+    youtubeVideos.style.setProperty('width', '90%', 'important');
     youtubeVideos.style.padding = "0 0 16px 0";
 
     setMediaEventListener();

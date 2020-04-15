@@ -1,5 +1,6 @@
 .contact-floral-background {
-  background: url(./../images/flowers-background.png) 60% 60% no-repeat;
+  background: url(./../images/flowers-background.png) 100% 100% no-repeat;
+  background-size: cover;
 
 }
 
@@ -45,7 +46,11 @@
 }
 
 .find-us-box img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   border: 1px solid $mandarin;
+  width: 100%;
 }
 
 .address {
