@@ -47,7 +47,7 @@
 
 
     </footer>
-
-
+     </div>  <!-- full-page-wrapper -->
+</body>
 
     </html>

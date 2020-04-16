@@ -27,6 +27,8 @@ html {
 }
 
 body {
+  // @include flexCenterCenter;
+  // flex-direction: column;
   position: relative;
   margin-top: 60px;
   background-color: $whitewashWhite;
@@ -80,4 +82,9 @@ p {
   border-bottom: 1px solid $mandarinAccent;
   margin-top: 16px;
   margin-bottom: 32px;
+}
+
+.full-site-wrapper {
+  max-width: 600px;
+  min-height: 100vh;
 }

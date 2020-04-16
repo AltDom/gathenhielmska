@@ -13,6 +13,7 @@
 </head>
 
 <body <?php body_class(); ?>>
+<div class="full-site-wrapper">
     <header>
         <nav role="navigation">
             <div class="logo"><img src="<?php bloginfo('template_directory') ?>/assets/images/logo.svg" alt="">
