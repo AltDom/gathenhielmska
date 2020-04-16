@@ -47,12 +47,14 @@ add_filter('jpeg_quality', function () {
 require get_template_directory() . '/fields/home.php';
 require get_template_directory() . '/fields/post.php';
 require get_template_directory() . '/fields/event.php';
+require get_template_directory() . '/fields/history.php';
 require get_template_directory() . '/post-types/post.php';
 require get_template_directory() . '/post-types/event.php';
 require get_template_directory() . '/post-types/staff.php';
 require get_template_directory() . '/post-types/affiliations.php';
 require get_template_directory() . '/post-types/venues.php';
 require get_template_directory() . '/post-types/tours.php';
+require get_template_directory() . '/post-types/history.php';
 require get_template_directory() . '/taxonomies/category.php';
 
 add_theme_support('soil-js-to-footer');

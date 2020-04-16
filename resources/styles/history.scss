@@ -1,0 +1,49 @@
+.historyPage {
+  @include flexCenterCenter;
+  flex-direction: column;
+  .historyPage__text {
+    text-align: center;
+    padding: 0 25px;
+  }
+}
+
+.historyContainer {
+  width: 100%;
+  @include flexCenterCenter;
+  flex-direction: column;
+  margin-top: 16px;
+}
+
+.historyContainer__item {
+  height: 386px;
+  width: 84%;
+  margin-bottom: 16px;
+  @include flexCenterCenter;
+  flex-direction: column;
+  justify-content: flex-start;
+  img {
+    height: 206px;
+    width: 100%;
+    object-fit: cover;
+  }
+  h1 {
+    margin: 0;
+  }
+  p {
+    text-align: center;
+    margin-top: 10px;
+  }
+}
+
+.historyContainer__item__yearContainer {
+  margin-top: -40px;
+  width: 82%;
+  height: 62px;
+  border: 1px solid $lineBlue;
+  background-color: $whitewashWhite;
+  @include flexCenterCenter;
+  h1 {
+    font-size: 56px;
+    font-family: "Abril Fatface";
+  }
+}

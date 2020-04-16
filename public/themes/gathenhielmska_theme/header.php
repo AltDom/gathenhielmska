@@ -7,6 +7,7 @@
     <meta name="theme-color" content="#6d9aea">
     <link href="https://unpkg.com/sanitize.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
 
     <?php wp_head(); ?>
 </head>
