@@ -78,9 +78,6 @@
         <h1 class="h1-center">HITTA HIT</h1>
 
         <div class = "address">
-            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M5.49999 16.5C2.46243 13.4624 2.46243 8.53757 5.5 5.5C8.53756 2.46244 13.4624 2.46244 16.5 5.50001C19.5376 8.53757 19.5376 13.4624 16.5 16.5L11 22L5.49999 16.5Z" fill="#FFA450"/>
-                <circle cx="11" cy="11" r="5" fill="#FF823F"/></svg>
             <h3>Adress</h3>
         </div>
         <div class = "address-text">
@@ -90,12 +87,12 @@
         </div>
         <img src="<?php bloginfo('template_directory') ?>/assets/images/map.png" alt="gathenhielmska-map">
         <div class="directions-div">
-            <h3 class = "directions">Vägbeskrivning: </h3>
-            <p class = "directions">Närmaste hållplats är blablabla och intill denfinns bla bla. Sen borde du se dadada. Sen är du där cacaca</p>
+            <h3 class = "directions-tagline">Vägbeskrivning: </h3>
+            <p class = "directions">Närmsta hållplats: Stigbergstorget.
+                Parkeringmöjligheter
+                finns på Stigbergstorget.</p>
         </div>
     </div>
-
-
 
 </div>
 

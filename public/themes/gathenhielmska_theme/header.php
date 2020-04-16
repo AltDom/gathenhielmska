@@ -16,8 +16,7 @@
 <div class="full-site-wrapper">
     <header>
         <nav role="navigation">
-            <div class="logo"><img src="<?php bloginfo('template_directory') ?>/assets/images/logo.svg" alt="">
-            </div>
+            <a href="/" class="logo"><img src="<?php bloginfo('template_directory') ?>/assets/images/logo.png" href="/home" alt=""></a>
             <?php the_title(); ?>
             <div class="menu">
                 <div class="floral-left"></div>
@@ -33,19 +32,18 @@
                         </li><!-- /nav-item -->
                     <?php endforeach; ?>
                     <li class="nav-item"><a class="nav-link">SV/ENG <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M6.5 12L0.00480941 0.75L12.9952 0.750001L6.5 12Z" fill="#FAF9F6"/>
-</svg>
-</a></li>
+                        <path d="M6.5 12L0.00480941 0.75L12.9952 0.750001L6.5 12Z" fill="#FAF9F6"/></svg>
+                    </a></li>
                 </ul><!-- /navbar -->
             </div>
             <div class="close"><svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1 1L32.5 32.5" stroke="white" stroke-width="2" stroke-linecap="round" />
                     <path d="M32.5 1L0.999999 32.5" stroke="white" stroke-width="2" stroke-linecap="round" /></svg></div>
             <div class="hamburger">
-                <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <line x1="6" y1="11.5" x2="38" y2="11.5" stroke="black" />
-                    <line x1="6" y1="21.5" x2="38" y2="21.5" stroke="black" />
-                    <line x1="6" y1="31.5" x2="38" y2="31.5" stroke="black" /></svg></div>
+            <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <line x1="7" y1="11" x2="37" y2="11" stroke="#1F3634" stroke-width="2" stroke-linecap="round"/>
+                <line x1="7" y1="21" x2="37" y2="21" stroke="#1F3634" stroke-width="2" stroke-linecap="round"/>
+                <line x1="7" y1="31" x2="37" y2="31" stroke="#1F3634" stroke-width="2" stroke-linecap="round"/></svg></div>
 
         </nav>
     </header>

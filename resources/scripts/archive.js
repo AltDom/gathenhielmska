@@ -36,9 +36,8 @@ const mediaSelection = () => {
       const instagramPictures = document.getElementById("sb_instagram");
       const youtubeVideos = document.querySelector(".sb_youtube");
 
-
-
       if (mediaSelect.querySelector(".videos.active")) {
+        htmlContent.classList.remove("display-none");
         instagramPictures.classList.add("display-none");
         youtubeVideos.classList.remove("display-none");
         const newVideos = videos.cloneNode(true);
@@ -50,6 +49,7 @@ const mediaSelection = () => {
         });
       }
       if (mediaSelect.querySelector(".pictures.active")) {
+        htmlContent.classList.add("display-none");
         instagramPictures.classList.remove("display-none");
         setTimeout(function (){
           youtubeVideos.classList.add("display-none");

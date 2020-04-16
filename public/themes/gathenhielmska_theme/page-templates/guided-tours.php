@@ -67,7 +67,7 @@
 
     <h1 class="h1-center">GRUPPBOKNINGAR</h1>
     <p>Är ni en grupp finns möjligheten att boka en egen guidad tur en tid och dag som passar just er. Kontakta oss  via telefon eller fyll i formuläret nedan.</p>
-    <div class = "book-button"><h2>FORMULÄR</h2></div>
+    <div class = "book-button"><h2>BOKNINGSFÖRFRÅGAN</h2></div>
 
 
 

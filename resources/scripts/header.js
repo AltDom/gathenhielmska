@@ -17,10 +17,10 @@ const header = () => {
     nav.childNodes[2].textContent = "PROGRAM";
   } else if (document.querySelector(".page-template-news")) {
     const nav = document.querySelector("nav");
-    nav.childNodes[2].textContent = "ARTIKLAR";
+    nav.childNodes[2].textContent = "NYHETER";
   } else if (document.querySelector(".single-post")) {
     const nav = document.querySelector("nav");
-    nav.childNodes[2].textContent = "ARTIKLAR";
+    nav.childNodes[2].textContent = "NYHETER";
   }
 
   const navSlide = () => {

@@ -70,13 +70,18 @@
   padding: 0 4px 4px 0;
 }
 
+.directions-tagline {
+  color: $deepTurquoise !important;
+  width: 310px !important;
+}
+
 .directions {
   color: $deepTurquoise !important;
-  display: inline;
 }
 
 .directions-div {
   margin-top: 15px;
+  display: flex;
 }
 
 

@@ -44,7 +44,7 @@
         <div>
             <img src="<?php bloginfo('template_directory') ?>/assets/images/homePageLink5.png" alt="">
             <a href="/news">
-                <h2>artiklar</h2>
+                <h2>nyheter</h2>
             </a>
         </div>
         <div>
