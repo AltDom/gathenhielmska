@@ -1,0 +1,27 @@
+.notFoundSection {
+  @include flexCenterCenter;
+  height: 550px;
+  margin-bottom: -80px;
+  background-color: $lineBlue;
+  div {
+    height: 303px;
+    width: 225px;
+    background-color: $mandarinAccent;
+    @include flexCenterCenter;
+    flex-direction: column;
+    * {
+      margin: 0;
+    }
+    h1 {
+      font-size: 40px;
+    }
+    h2 {
+      font-size: 32px;
+      color: $whitewashWhite;
+    }
+    p {
+      text-align: center;
+      padding: 20px;
+    }
+  }
+}
