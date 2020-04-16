@@ -31,8 +31,12 @@ endwhile;
     <form class="searchForm" action="/search" method="post">
         <input class="searchForm__searchBar" type="text" name="search">
         <div class="searchForm__options">
-            <div class="searchForm__options__orderBtn">Sortera efter</div>
-            <div class="searchForm__options__categoryBtn">Visa filter</div>
+            <div class="searchForm__options__orderBtn">
+                <p>Sortera efter</p>
+            </div>
+            <div class="searchForm__options__categoryBtn">
+                <p>Visa filter</p>
+            </div>
         </div>
         <div class="searchForm__listWrapper">
             <div class="searchForm__categoryList hidden">

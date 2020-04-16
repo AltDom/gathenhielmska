@@ -58,6 +58,9 @@
 
   p {
     margin-bottom: 19px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
 

@@ -9,7 +9,7 @@
     height: 39px;
     width: 100%;
     margin-bottom: 6px;
-    border: 1px solid $lineBlue;
+    border: 1px solid $deepTurquoise;
 
     background-color: $whitewashWhite;
     color: $deepTurquoise;
@@ -21,16 +21,23 @@
     height: 46px;
     width: 100%;
     @include flexRow;
-    border: 1px solid $lineBlue;
     background-color: $whitewashWhite;
     div {
       width: 50%;
       @include flexCenterCenter;
     }
-    :last-child {
-      background-color: $lineBlue;
+  }
+
+  .searchForm__options__categoryBtn {
+    background-color: $lineBlue;
+    border: 1px solid $deepTurquoise;
+    p {
       color: $whitewashWhite;
     }
+  }
+
+  .searchForm__options__orderBtn {
+    border: 1px solid $deepTurquoise;
   }
 
   .searchForm__listWrapper {

@@ -34,6 +34,7 @@ const singleEvent = () => {
             <div class="singleEvent__textWrapper__ticketLink">
                 <a href="${values.ticketLink}"><h1>KÖP VIA BILETTO</h1></a>
             </div>
+            <p class="event-tagline"><b>${values.tagline}</b></p>
             <p>${values.description}</p>`;
       });
   }

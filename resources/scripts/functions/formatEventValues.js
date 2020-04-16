@@ -9,6 +9,7 @@ const formatEventValues = event => {
   const eventLink = event.link;
   const ticketLink = event.acf.ticket_link;
   const image = event.acf.image;
+  const tagline = event.acf.tagline;
   const description = event.acf.description;
   const fullDate = `${dayOfMonth}/${date.getMonth() + 1}/${date.getFullYear()}`;
   const time = `${date.getHours()}:${String(date.getMinutes()).padStart(
@@ -94,6 +95,7 @@ const formatEventValues = event => {
     month: month,
     weekDay: weekDay,
     title: title,
+    tagline: tagline,
     performer: performer,
     description: description,
     fullDate: fullDate,
