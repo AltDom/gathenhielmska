@@ -25,7 +25,7 @@ const mediaSelection = () => {
     }
     const htmlContent = document.createElement('div');
     htmlContent.classList.add("news-container");
-    htmlContent.innerHTML = `<img src="/themes/gathenhielmska_theme/assets/images/floral-divider.png" alt="floral-divider">
+    htmlContent.innerHTML = `<img class="floral-divider" src="/themes/gathenhielmska_theme/assets/images/floral-divider.png" alt="floral-divider">
     <p>På vår youtube finns även en livefunktion om möjlighet inte finns att besöka oss. Här ser ni våra senaste uppladdningar.</p>`;
     insertAfter(htmlContent, mediaSelect);
 

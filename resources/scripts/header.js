@@ -18,6 +18,9 @@ const header = () => {
   } else if (document.querySelector(".page-template-news")) {
     const nav = document.querySelector("nav");
     nav.childNodes[2].textContent = "ARTIKLAR";
+  } else if (document.querySelector(".single-post")) {
+    const nav = document.querySelector("nav");
+    nav.childNodes[2].textContent = "ARTIKLAR";
   }
 
   const navSlide = () => {

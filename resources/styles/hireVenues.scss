@@ -15,7 +15,7 @@
   position: absolute;
   top: 10px;
   text-align: center;
-  border-bottom: 2px solid $mandarin;
+  border-bottom: 2px solid $mandarinAccent;
   text-transform: uppercase;
 }
 
@@ -128,7 +128,7 @@
 .booking-form button {
   width: 100%;
   height: 46px;
-  background-color: $mandarin;
+  background-color: $mandarinAccent;
   color: $deepTurquoise;
   border-style: hidden;
   @include H1;

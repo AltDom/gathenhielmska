@@ -42,6 +42,7 @@ footer {
     }
 
     .mailing-list-button {
+      @include H2;
       background-color: $lineBlue;
       color: $whitewashWhite;
       width: 100%;
