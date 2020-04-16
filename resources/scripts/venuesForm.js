@@ -13,7 +13,7 @@ const venuesForm = () => {
         if(document.getElementById("venue")) {
           const label = document.getElementById("label");
           const input = document.getElementById("venue");
-          const venue = event.target.id;
+          const venue = event.target.id.toLowerCase();
           input.value = venue;
           label.innerHTML = venue;
         }

@@ -66,16 +66,20 @@ const mediaSelection = () => {
 
 
     const seeMore = document.querySelector(".sbi_btn_text");
-    seeMore.classList.add("seeMoreStyling");
-    seeMore.innerHTML = `SE FLER    <svg width="22" height="12" viewBox="0 0 22 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M1 1L11 11L21 1" stroke="black"/>
-      </svg>`;
+    seeMore.classList.add("eventPage");
+    seeMore.innerHTML = `<button class="loadMoreBtn">
+    <h2>SE FLER</h2><svg width="22" height="12" viewBox="0 0 22 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1 1L11 11L21 1" stroke="black" />
+    </svg>
+</button>`;
 
     const seeMoreVideos = document.querySelector(".sby_btn_text");
     seeMoreVideos.classList.add("seeMoreStyling");
-    seeMoreVideos.innerHTML = `SE FLER    <svg width="22" height="12" viewBox="0 0 22 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M1 1L11 11L21 1" stroke="black"/>
-      </svg>`;
+    seeMoreVideos.innerHTML = `<button class="loadMoreBtn">
+    <h2>SE FLER</h2><svg width="22" height="12" viewBox="0 0 22 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1 1L11 11L21 1" stroke="black" />
+    </svg>
+</button>`;
     seeMoreVideos.addEventListener("click", () => {
       setTimeout(function (){
         const youtubeItems = document.querySelectorAll(".sby_item");

@@ -7,7 +7,7 @@
     <div class = "opacity-div"></div>
     <div class = "booking-form">
         <form name="group-tour-form" method="POST" action="/email/">
-            <label>GRUPPBOKNING</label>
+            <label>Gruppbokningar</label>
             <input type="hidden" name="path" value="/guidade-turer/">
             <input type="text" name="applicant-name" placeholder="För- & Efternamn" required>
             <input type="text" name="applicant-email" placeholder="Email" required>

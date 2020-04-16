@@ -33,7 +33,7 @@ footer {
       margin-top: 12px;
     }
 
-    .mailing-list-input ::-webkit-input-placeholder {
+    .mailing-list-input:placeholder-shown {
       color: $deepTurquoise !important;
       @include paragraph;
       font-style: italic;
