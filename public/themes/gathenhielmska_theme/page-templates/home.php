@@ -19,7 +19,7 @@
 
         <div>
             <img src="<?php bloginfo('template_directory') ?>/assets/images/homePageLink1.png" alt="">
-            <a href="#">
+            <a href="/history">
                 <h2>historia</h2>
             </a>
         </div>
@@ -31,13 +31,13 @@
         </div>
         <div>
             <img src="<?php bloginfo('template_directory') ?>/assets/images/homePageLink3.png" alt="">
-            <a href="#">
+            <a href="/archive">
                 <h2>arkiv</h2>
             </a>
         </div>
         <div>
             <img src="<?php bloginfo('template_directory') ?>/assets/images/homePageLink4.png" alt="">
-            <a href="#">
+            <a href="/hire-venue">
                 <h2>hyr lokal</h2>
             </a>
         </div>
@@ -49,7 +49,7 @@
         </div>
         <div>
             <img src="<?php bloginfo('template_directory') ?>/assets/images/homePageLink6.png" alt="">
-            <a href="#">
+            <a href="/guided-tour">
                 <h2>guidad tur</h2>
             </a>
         </div>
@@ -102,7 +102,7 @@
         <h1>BOKA VÅRA SALAR</h1>
         <p>Möjlighet att boka våra salar för att hålla ett event eller varför inte en worshop med företaget i inspirerande miljö.</p>
         <div>
-            <a href="#">
+            <a href="/hire-venue">
                 <h2>LÄS MER OCH BOKA</h2>
             </a>
         </div>

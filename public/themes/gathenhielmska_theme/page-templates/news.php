@@ -87,7 +87,6 @@ endwhile;
         </form>
     </div>
 
-
     <div class="news-container"></div>
 
     <p class="noMoreMessage hidden">No more articles</p>

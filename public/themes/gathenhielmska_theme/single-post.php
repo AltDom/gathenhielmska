@@ -27,9 +27,9 @@ $categories = get_the_terms($post, 'category'); ?>
             <p>Nothing to see.</p>
         </article>
     <?php endif; ?>
-    <div class="seeMoreStyling">
-        <a href="/news">tillbaks till artiklar</a>
-    </div>
+    <a class="readMoreContainer" href="/news">
+        <h2 class="readMoreLink">tillbaks till artiklar</h2>
+    </a>
 </main>
 
 <?php get_footer();

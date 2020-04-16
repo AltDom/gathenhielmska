@@ -28,7 +28,7 @@
 
 .venue-availability {
   position: absolute;
-  width: 140px;
+  width: 280px;
   top: 100px;
   text-align: center;
 }
@@ -91,16 +91,12 @@
   background-color: $whitewashWhite;
   border-color: $deepTurquoise;
   border-width: 1px 0;
-  // border-style: solid;
-  // border: 0.5px 0 solid $deepTurquoise;
 }
 
 .booking-form input ::-webkit-input-placeholder {
   color: $deepTurquoise !important;
   @include paragraph;
   font-style: italic;
-  // padding-left: 10px;
-  // opacity: 1;
 }
 
 .booking-form input[type=date] {
@@ -110,7 +106,6 @@
   color: $deepTurquoise;
   @include paragraph;
   background-color: $whitewashWhite;
-  // border: 0.5px 0 solid $deepTurquoise;
 }
 
 .about-event-input {
@@ -143,7 +138,6 @@
   display: flex;
   flex-direction: row-reverse;
   position: relative;
-  // border: 0.5px solid $deepTurquoise;
 }
 
 .upload-input {

@@ -28,7 +28,7 @@
         </form>
     </div>
 
-    <p>Intresserad av att hyra våra lokaler för ett event eller er nästa konferens. Nedan listar vi våra våra olika alternativ. Välkommen att kontakta oss vid intresse.</p>
+    <p>Om du är intresserad av att ta del av vårt kulturarv och bidra till ett rikare kulturliv finns möjlighet att hyra våra lokaler. Allt från en konferens, workshop eller ett event för allmänheten. Nedan listar vi våra olika salar med möjlighet att hyra och vad dem passar för. Välkommen att kontakta oss vid intresse.</p>
 
     <div class = "venues-box">
         <?php
@@ -45,7 +45,7 @@
                 <img class = "venue-img" src="<?php echo customFieldExcerpt(get_field("photo"), 1, ""); ?>" alt="">
                 <h1 class = "venue-name"><?php echo strtoupper(customFieldExcerpt(get_field("venue_name"), 4, "")); ?></h1>
                 <p class = "venue-capacity">Upp till <?php echo customFieldExcerpt(get_field("capacity"), 1, ""); ?> personer</p>
-                <p class = "venue-availability"><?php echo customFieldExcerpt(get_field("availability_status"), 5, ""); ?></p>
+                <p class = "venue-availability"><?php echo customFieldExcerpt(get_field("availability_status"), 15, ""); ?></p>
             </div>
             <div id="<?php echo strtoupper(customFieldExcerpt(get_field("venue_name"), 4, "")); ?>" class="book-button"><h2>BOKNINGSFÖRFRÅGAN</h2></div>
 

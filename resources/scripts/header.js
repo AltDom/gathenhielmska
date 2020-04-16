@@ -3,37 +3,6 @@
 
 const header = () => {
 
-  // const toggleLanguage = () => {
-  //   const header = document.querySelector("header");
-  //   const swedish = header.querySelector(".swedish");
-  //   const english = header.querySelector(".english");
-  //   swedish.classList.toggle("active");
-  //   english.classList.toggle("active");
-  // };
-
-  // const setLanguageEventListener = () => {
-  //   const header = document.querySelector("header");
-  //   const swedish = header.querySelector(".swedish");
-  //   const english = header.querySelector(".english");
-  //   if (header.querySelector(".english.active")) {
-  //     const newEnglish = english.cloneNode(true);
-  //     newEnglish.classList.add("active");
-  //     english.parentNode.replaceChild(newEnglish, english);
-  //     swedish.addEventListener("click", () => {
-  //       toggleLanguage();
-  //       setLanguageEventListener();
-  //     });
-  //   }
-  //   if (header.querySelector(".swedish.active")) {
-  //     const newSwedish = swedish.cloneNode(true);
-  //     newSwedish.classList.add("active");
-  //     swedish.parentNode.replaceChild(newSwedish, swedish);
-  //     english.addEventListener("click", () => {
-  //       toggleLanguage();
-  //       setLanguageEventListener();
-  //     });
-  //   }
-  // };
   if (document.querySelector(".page-template-home")) {
     const nav = document.querySelector("nav");
     nav.childNodes[2].textContent = "GATHENHIELMSKA";
