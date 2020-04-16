@@ -24,11 +24,9 @@ const createNewsBox = post => {
   </div>
   <p class="news-tagline"><b>${post.acf.tagline}</b></p>
   <p class="news-text">${post.acf.description}</p>
-  <div class="readMoreContainer">
-    <a href="${post.link}">
+    <a class="readMoreContainer" href="${post.link}">
       <h2 class="readMoreLink">LÄS MER HÄR</h2>
     </a>
-  </div>
 </div>`;
 
   return newsBox;

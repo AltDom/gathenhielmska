@@ -5,7 +5,6 @@
 @import "assets/mixins.scss";
 
 // import page styling
-@import "main.scss";
 @import "header.scss";
 @import "eventPage.scss";
 @import "eventCard.scss";
@@ -21,11 +20,6 @@
 @import "singleEvent.scss";
 @import "homePage.scss";
 
-// * {
-//   -webkit-font-smoothing: antialiased;
-//   -moz-osx-font-smoothing: grayscale;
-// }
-
 html {
   margin: 0px;
   padding: 0px;
@@ -35,6 +29,8 @@ html {
 body {
   position: relative;
   margin-top: 60px;
+  background-color: $whitewashWhite;
+  min-height: 100vh;
 }
 
 .hidden {
@@ -78,7 +74,10 @@ p {
 }
 
 .readMoreLink {
+  @include flexCenterCenter;
+  flex-direction: column;
   text-transform: uppercase;
   border-bottom: 1px solid $mandarinAccent;
-
+  margin-top: 16px;
+  margin-bottom: 32px;
 }

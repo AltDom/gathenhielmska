@@ -33,6 +33,11 @@
 
 }
 
+.single-event-category,
+.single-event-performer {
+  color: $lineBlue !important;
+}
+
 .eventCard__textContainer {
   padding: 0 6px;
   color: $deepTurquoise;

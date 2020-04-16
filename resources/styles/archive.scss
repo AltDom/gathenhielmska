@@ -32,7 +32,7 @@
 
 .seeMoreStyling,
 .seeMoreStyling a {
-  @include paragraph;
+  @include H2;
   color: $deepTurquoise;
   @include flexJustifyCenter;
 }

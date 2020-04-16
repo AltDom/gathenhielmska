@@ -12,10 +12,11 @@
   width: 92%;
   height: auto;
   margin-bottom: 0;
-  .readMoreLink {
-    display: inline-block;
-    margin: 0;
-  }
+  // .readMoreLink {
+  //   align-items: center;
+  //   width: 180px;
+  //   margin: 0;
+  // }
 }
 
 .news-post-box,
@@ -40,7 +41,7 @@
 }
 
 .news-text {
-  margin-bottom: 32px;
+  margin-bottom: 20px;
   @include paragraph;
   max-height: 308px;
   display: -webkit-box;
@@ -51,7 +52,7 @@
 }
 
 .single-news-text {
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   @include paragraph;
   color: $deepTurquoise;
 }
@@ -111,8 +112,8 @@
 }
 
 a {
-  color: $grey;
   text-decoration: none;
+  color: $deepTurquoise;
 }
 
 a:hover // Desktop only
@@ -133,7 +134,9 @@ a:hover // Desktop only
 
 .readMoreContainer {
   @include flexCenterCenter;
-  margin-bottom: 32px;
+  margin-bottom: 10px;
 }
+
+
 
 

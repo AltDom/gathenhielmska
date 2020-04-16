@@ -1,6 +1,11 @@
 <?php /* Template Name: Contact */ ?>
 <?php get_header(); ?>
 
+<div class="news-container">
+    <p>I april 2020 öppnas Gathenhielmska Huset upp med ett officiellt program från det fria kulturlivet. Huset
+är en sammanlänkande plats för gränsöverskridande kulturella möten. Ett program med föreställningar, visningar, utställningar och andra evenemang för att tillgängliggöra huset och dess kulturhistoriska värde.</p>
+    <p>Välkomna att kontakta oss för eventuella frågor.</p>
+</div>
 
 <div class = "contact-floral-background">
     <div class="news-container">
