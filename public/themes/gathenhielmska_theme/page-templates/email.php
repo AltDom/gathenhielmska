@@ -12,7 +12,7 @@ if(isset($_POST['applicant-email'], $_POST['path']) && PHPMailer::validateAddres
     $path = trim(filter_var($_POST['path'], FILTER_SANITIZE_STRING));
     $name = trim(filter_var($_POST['applicant-name'], FILTER_SANITIZE_STRING));
     // Adjust this! Should be a gmail address all emails arrive to.
-    $to = 'worldsurfintrigue@gmail.com';
+    $to = '';
 
     $mail = new PHPMailer;
     $mail->isSMTP();
@@ -23,7 +23,7 @@ if(isset($_POST['applicant-email'], $_POST['path']) && PHPMailer::validateAddres
     /* Set the encryption system. */
     $mail->SMTPSecure = 'ssl';
     /* SMTP authentication username. eg. use "gathhuset" if the email address is gathhuset@gmail.com */
-    $mail->Username = 'kerschdominic';
+    $mail->Username = '';
     /* SMTP authentication password. The email above's password. */
     $mail->Password = '';
     /* Set the SMTP port. */
