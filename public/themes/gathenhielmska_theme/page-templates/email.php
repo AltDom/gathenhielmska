@@ -2,14 +2,22 @@
 
 <?php
 
+session_start();
+
 use PHPMailer\PHPMailer\PHPMailer;
 require '../vendor/autoload.php';
 
 // die(var_dump($_POST));
+$_SESSION['errors'] = [];
+$_SESSION['successes'] = [];
 
-if(isset($_POST['applicant-email'], $_POST['path']) && PHPMailer::validateAddress($_POST['applicant-email'])) {
+if(isset($_POST['applicant-email'], $_POST['path'])) {
     $from = trim(filter_var($_POST['applicant-email'], FILTER_SANITIZE_EMAIL));
     $path = trim(filter_var($_POST['path'], FILTER_SANITIZE_STRING));
+    if(!$from || PHPMailer::validateAddress($_POST['applicant-email']) === false) {
+        $_SESSION['errors'][] = 'Please use a valid email address.';
+        redirect($path);
+    }
     $name = trim(filter_var($_POST['applicant-name'], FILTER_SANITIZE_STRING));
     // Adjust this! Should be a gmail address all emails arrive to.
     $to = '';
@@ -30,6 +38,7 @@ if(isset($_POST['applicant-email'], $_POST['path']) && PHPMailer::validateAddres
     $mail->Port = 465;
     $mail->CharSet = PHPMailer::CHARSET_UTF8;
 
+    // If a venue is hired
     if(isset($_POST['venue'])) {
         $mail->setFrom($from, (empty($name) ? 'Venue booking' : $name));
         $mail->addAddress($to);
@@ -41,6 +50,26 @@ if(isset($_POST['applicant-email'], $_POST['path']) && PHPMailer::validateAddres
         $date = trim(filter_var($_POST['hire-date'], FILTER_SANITIZE_STRING));
         $time = trim(filter_var($_POST['hire-time'], FILTER_SANITIZE_STRING));
         $category = trim(filter_var($_POST['category'], FILTER_SANITIZE_STRING));
+
+        // Attach the uploaded file.
+        if(isset($_FILES['event-picture'])) {
+            $eventPicture = $_FILES['event-picture'];
+            if (!in_array($eventPicture['type'], ['image/jpeg', 'image/png'])) {
+                $_SESSION['errors'][] = 'The uploaded event image type is not allowed.';
+            }
+            if ($eventPicture['size'] > 2097152) {
+                $_SESSION['errors'][] = 'The uploaded event image exceeds the 2MB filesize limit.';
+            }
+            // Put the uploaded file into the system's temp directory with a name randomly assigned by the Secure Hash Algorithm (sha265).
+            $uploadedFile = tempnam(sys_get_temp_dir(), hash('sha256', $eventPicture));
+            if(move_uploaded_file($eventPicture['tmp_name'], $uploadedFile) && $_SESSION['errors'] === []) {
+                $mail->addAttachment($uploadedFile, $event);
+            } else {
+                $_SESSION['errors'] = [];
+                $_SESSION['errors'][] = 'The uploaded image file could not be uploaded. Try again with another image or without an image.';
+                redirect($path);
+            }
+        }
         if(isset($_POST['about-event'])) {
             $about = trim(filter_var($_POST['about-event'], FILTER_SANITIZE_STRING));
         } else {
@@ -51,6 +80,7 @@ if(isset($_POST['applicant-email'], $_POST['path']) && PHPMailer::validateAddres
 
     }
 
+    // If a group guided tour booking enquiree is made
     if(isset($_POST['group-size'])) {
         $mail->setFrom($from, (empty($name) ? 'Guided tour group booking' : $name));
         $mail->addAddress($to);
@@ -67,21 +97,32 @@ if(isset($_POST['applicant-email'], $_POST['path']) && PHPMailer::validateAddres
         $message = "$name / $from / $phone\nwould like to make a guided tour group booking\non $date for $numberGroup persons.\nAdditional info: $about";
     }
 
+    // If the mailing list is joined
     if($_POST['path']=="/") {
         $mail->setFrom($from, (empty($name) ? 'Join the mailing list' : $name));
         $mail->addAddress($to);
 
         $subject = 'Join the mailing list: ' . $from;
         $message = "$from has submitted a request to be added to the Gathenhielmska mailing list.";
+
+        $mail->Subject = $subject;
+        $mail->Body = $message;
+
+        if (!$mail->send()) {
+            $_SESSION['errors'][] = 'Your email couldn\'t be added to the mailing list at this time.';
+        } else {
+            $_SESSION['successes'][] = 'Your email has been added to our mailing list.';
+        }
+        redirect($path);
     }
 
     $mail->Subject = $subject;
     $mail->Body = $message;
 
     if (!$mail->send()) {
-        $msg .= 'Mailer Error: '. $mail->ErrorInfo;
+        $_SESSION['errors'][] = 'Your enquiree couldn\'t be sent at this time.';
     } else {
-        $msg .= 'Message sent!';
+        $_SESSION['successes'][] = 'We have received your enquiree. One of our staff members will be in touch with you shortly.';
     }
 
 

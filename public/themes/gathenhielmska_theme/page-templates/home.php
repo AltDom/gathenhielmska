@@ -7,6 +7,7 @@
     <!-- Hero -->
     <?php while (have_posts()) : the_post(); ?>
         <div class="homePage__heroContainer">
+
             <img src="<?php the_field('hero_image') ?>" alt="hero image" class="homePage__heroContainer__heroImage">
             <div class="homePage__heroContainer__textContainer">
                 <h1><?php the_field('hero_headline'); ?></h1>

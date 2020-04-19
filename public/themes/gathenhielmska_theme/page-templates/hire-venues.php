@@ -1,14 +1,36 @@
 <?php /* Template Name: Hire Venues */ ?>
+<?php session_start(); ?>
 <?php get_header(); ?>
 
+<?php if(isset($_SESSION['errors'])) {
+    $errors = $_SESSION['errors'];
+} else {
+    $errors = [];
+} ?>
+
+<?php if(isset($_SESSION['successes'])) {
+    $successes = $_SESSION['successes'];
+} else {
+    $successes = [];
+} ?>
+
 <div class="news-container">
+
+    <?php foreach ($errors as $error) : ?>
+        <p class="errors"><?= $error; ?></p>
+    <?php endforeach; ?>
+
+    <?php foreach ($successes as $success) : ?>
+        <p class="successes"><?= $success; ?></p>
+    <?php endforeach; ?>
+
     <img class = "floral-divider" src="<?php bloginfo('template_directory') ?>/assets/images/floral-divider.png" alt="floral-divider">
     <div class = "opacity-div"></div>
     <div class = "booking-form">
         <form name="hire-venue-form" method="post" action="/email/" enctype="multipart/form-data">
             <label id="label"></label>
             <input type="hidden" id="venue" name="venue" value="">
-            <input type="hidden" name="path" value="/hyr-vara-lokaler/">
+            <input type="hidden" name="path" value="/hire-venue/">
             <input type="text" name="applicant-name" placeholder="För- & Efternamn" required>
             <input type="text" name="applicant-email" placeholder="Email" required>
             <input type="text" name="phone-number" placeholder="Telefonnummer" required>
@@ -61,3 +83,6 @@
 </div>
 
 <?php get_footer(); ?>
+<?php unset($_SESSION['errors']); ?>
+<?php unset($_SESSION['successes']); ?>
+<?php session_destroy(); ?>

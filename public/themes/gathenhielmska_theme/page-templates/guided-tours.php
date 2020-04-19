@@ -1,14 +1,27 @@
 <?php /* Template Name: Guided Tours */ ?>
+
+<?php session_start(); ?>
 <?php get_header(); ?>
 
+<?php if(isset($_SESSION['errors'])) {
+    $errors = $_SESSION['errors'];
+} else {
+    $errors = [];
+} ?>
+
 <div class="news-container">
+
+    <?php foreach ($errors as $error) : ?>
+        <p class="errors"><?= $error; ?></p>
+    <?php endforeach; ?>
+
     <img class = "floral-divider" src="<?php bloginfo('template_directory') ?>/assets/images/floral-divider.png" alt="floral-divider">
 
     <div class = "opacity-div"></div>
     <div class = "booking-form">
         <form name="group-tour-form" method="POST" action="/email/">
             <label>Gruppbokningar</label>
-            <input type="hidden" name="path" value="/guidade-turer/">
+            <input type="hidden" name="path" value="/guided-tour/">
             <input type="text" name="applicant-name" placeholder="För- & Efternamn" required>
             <input type="text" name="applicant-email" placeholder="Email" required>
             <input type="text" name="phone-number" placeholder="Telefonnummer" required>
@@ -69,20 +82,9 @@
     <p>Är ni en grupp finns möjligheten att boka en egen guidad tur en tid och dag som passar just er. Kontakta oss  via telefon eller fyll i formuläret nedan.</p>
     <div class = "book-button"><h2>BOKNINGSFÖRFRÅGAN</h2></div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 </div>
 
 <?php get_footer(); ?>
+<?php unset($_SESSION['errors']); ?>
+<?php session_destroy(); ?>
 
