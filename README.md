@@ -26,7 +26,7 @@ The website is built into a WordPlate configured WordPress CMS, and is written w
 * Open your browser of choice (e.g. Brave) and go to the url `localhost:8000`.
 
 ## Building the WordPress Database
-* In a second browser window, got to the url `localhost:8000/wordpress/wd-admin/` to view the CMS.
+* In a second browser window, go to the url `localhost:8000/wordpress/wd-admin/` to view the CMS.
 * Download the 5 WordPress plugins listed above and ensure they are located in the `public/plugins` directory. Back on the CMS page, activate them all by clicking the Plugins tab on the left nav bar and clicking on `activate` for each.
 * Create the website's pages in the Pages tab. The pages to include are: Archive, Email, Events, Guided Tour, Home, History, Hire Venue, News and Contact. In each created page, ensure that the permalink slug is exactly the same name as written here, in lowercase and hyphenated where two words exists (e.g. guided-tour). The home page should have its permalink set to your localhost (e.g. `http://localhost:8000/`). Also choose the Template that matches each page name, however leave the Archive page as the `Default template`.
 * To build the Instagram and YouTube feeds, connect to existing Instagram and Youtube accounts in their respective tabs, and paste the lines `[instagram-feed user="YOUR-ACCOUNT-NAME"]` and `[youtube-feed width="300px"]` into their respective page bodies.
